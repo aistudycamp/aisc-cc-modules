@@ -84,4 +84,4 @@ Then do these two things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 4: Plugins` to `- [x] Module 4: Plugins`
 
 2. **Direct them to the next module:**
-   > "Module 5 is about Hooks -- automatic behaviors that fire when certain events happen. It's one of Claude Code's most powerful features, and you're going to understand exactly how it works. Type `/module-5` when you're ready!"
+   > "Module 5 is about Hooks -- automatic behaviors that fire when certain events happen. It's one of Claude Code's most powerful features, and you're going to understand exactly how it works. Type `module-5` when you're ready!"

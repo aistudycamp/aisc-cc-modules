@@ -25,9 +25,9 @@ Explain skills using the "recipe cards" analogy:
 - A skill is a set of saved instructions that tells Claude exactly how to perform a specific task. Instead of typing out a long, detailed prompt every time you want Claude to do something, you save those instructions once as a skill and reuse it forever.
 - Skills live as markdown files inside the `.claude/skills/` folder in your project.
 - Each skill file has two parts:
-  - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a name and description. The `name` field becomes the slash command you type to run it.
+  - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a name and description. The `name` field becomes the command you type to run it.
   - **Markdown body** below -- this is where the actual instructions live. You write them in plain English.
-- You run a skill by typing its name as a slash command. For example, a skill named `write-blog-post` would be invoked by typing `/write-blog-post`.
+- You run a skill by typing its name. For example, a skill named `write-blog-post` would be invoked by typing `write-blog-post`.
 
 Point the student to `concepts/what-are-skills.md` if they want to read more after the lesson.
 
@@ -44,7 +44,7 @@ Read the example skill file at `examples/example-skill.md` using your Read tool.
    description: Run a quick daily standup — asks three questions and formats a summary.
    ---
    ```
-   Explain: "See the `name: daily-standup`? That means you'd invoke this skill by typing `/daily-standup`. The description shows up in the skill list so you know what it does at a glance."
+   Explain: "See the `name: daily-standup`? That means you'd invoke this skill by typing `daily-standup`. The description shows up in the skill list so you know what it does at a glance."
 
 2. **The markdown body:** Walk through the steps and tone section. "These are the instructions Claude follows -- ask three specific questions, then format a summary. The tone section reminds Claude to keep it casual. You can put whatever instructions you want here."
 
@@ -86,4 +86,4 @@ Then do these two things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 3: Skills` to `- [x] Module 3: Skills`
 
 2. **Direct them to the next module:**
-   > "In Module 4, you'll discover Plugins -- pre-built collections of skills that others have created and shared. Instead of building everything yourself, you'll learn how to tap into a whole ecosystem. Type `/module-4` when you're ready!"
+   > "In Module 4, you'll discover Plugins -- pre-built collections of skills that others have created and shared. Instead of building everything yourself, you'll learn how to tap into a whole ecosystem. Type `module-4` when you're ready!"

@@ -92,4 +92,4 @@ Then update the progress checklist in CLAUDE.md by changing Module 6 from `[ ]` 
 
 Direct them to the next module:
 
-> "Next up is Module 7, where we'll explore how Claude *remembers* things between conversations. If MCP lets Claude reach out to the world, memory lets Claude carry knowledge forward over time. Type `/module-7` when you're ready!"
+> "Next up is Module 7, where we'll explore how Claude *remembers* things between conversations. If MCP lets Claude reach out to the world, memory lets Claude carry knowledge forward over time. Type `module-7` when you're ready!"

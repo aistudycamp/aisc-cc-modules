@@ -98,4 +98,4 @@ Then do these two things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 5: Hooks` to `- [x] Module 5: Hooks`
 
 2. **Direct them to the next module:**
-   > "You're over halfway through the course! Module 6 is about MCP Servers -- how Claude connects to external services like databases, APIs, and other tools. Type `/module-6` when you're ready to keep going!"
+   > "You're over halfway through the course! Module 6 is about MCP Servers -- how Claude connects to external services like databases, APIs, and other tools. Type `module-6` when you're ready to keep going!"

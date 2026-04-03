@@ -29,14 +29,14 @@ Explain the key best practices one by one, in plain language:
 - You enter plan mode by typing `/plan` or by pressing **Shift+Tab** to toggle it on before sending a message.
 - Once you approve the plan, Claude switches back to normal mode and starts executing.
 
-### Slash Commands
+### Commands
 
-- You've already used slash commands — like `/module-1` to start the first lesson! Slash commands are shortcuts that trigger specific actions.
-- Some useful built-in ones to know:
-  - `/help` — see what commands are available
-  - `/clear` — start a fresh conversation while staying in the same project. Your CLAUDE.md and memories still apply, but the conversation history resets. Great when things get cluttered or you want to switch topics.
-  - `/compact` — condenses the current conversation to save context space. Use this when conversations get long and Claude starts losing track of earlier details.
-- You can also create your own slash commands (that's what skills are — you'll learn about those in Module 3!).
+- You've already used commands — like `module-1` to start the first lesson! There are two kinds of commands in Claude Code:
+  - **Built-in commands** start with `/` (a forward slash):
+    - `/help` — see what commands are available
+    - `/clear` — start a fresh conversation while staying in the same project. Your CLAUDE.md and memories still apply, but the conversation history resets. Great when things get cluttered or you want to switch topics.
+    - `/compact` — condenses the current conversation to save context space. Use this when conversations get long and Claude starts losing track of earlier details.
+  - **Skills** are invoked by typing their name (no slash needed). For example, `module-1` runs the Module 1 skill. You'll learn how to create your own skills in Module 3!
 
 ### Resuming a Session
 
@@ -106,4 +106,4 @@ Then do these two things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 2: Best Practices` to `- [x] Module 2: Best Practices`
 
 2. **Direct them to the next module:**
-   > "In Module 3, you'll learn about Skills — reusable instructions you can give Claude for specific tasks. You'll even build one yourself! Type `/module-3` whenever you're ready!"
+   > "In Module 3, you'll learn about Skills — reusable instructions you can give Claude for specific tasks. You'll even build one yourself! Type `module-3` whenever you're ready!"
