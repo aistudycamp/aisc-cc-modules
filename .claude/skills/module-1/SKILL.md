@@ -32,7 +32,13 @@ Point the student to `concepts/what-is-claude-md.md` if they want to read more a
 
 ## Step 3: Show
 
-This is where it gets fun. Read the CLAUDE.md file at the root of this repo using your Read tool. Then walk through it section by section WITH the student, making it personal and interactive:
+This is where it gets fun. First, **show the student the entire CLAUDE.md file** so they can see it with their own eyes. Print the full contents of the CLAUDE.md file directly into the conversation -- don't summarize it, don't skip sections. Let them read every line. Say something like:
+
+> "Before I walk you through it, here's the entire file. Take a look:"
+
+Then print the full file contents.
+
+After they've seen it, walk through it section by section WITH the student, making it personal and interactive:
 
 1. **The identity block** (the line about being a "warm, encouraging coach"): Say something like -- "See this line? It says I should be a warm, encouraging coach. That's why I've been talking to you this way the whole time! You've been experiencing CLAUDE.md in action without even knowing it."
 
@@ -48,20 +54,39 @@ Make it a genuine revelation moment: "You've been experiencing CLAUDE.md this en
 
 ## Step 4: Exercise
 
-Now the student gets hands-on. Walk them through this:
+Now the student gets hands-on. This exercise has them write a personal "About Me" section in the CLAUDE.md so Claude can tailor the entire course experience to their real life.
 
-1. **Ask them to think of a custom instruction** they want to add to the CLAUDE.md. Give them some fun examples to spark ideas:
-   - "Always end responses with an encouraging quote"
-   - "Use emoji when celebrating milestones"
-   - "Start each module with a fun fact"
-   - "If I seem frustrated, remind me that learning takes time"
-   - Or anything they come up with!
+1. **Ask them about themselves.** Say something like:
 
-2. **Help them add it to CLAUDE.md.** Once they tell you what they want, use the Edit tool to add their custom instruction to the CLAUDE.md file. Add it in a natural place -- perhaps under the Teaching Guardrails section, or as a new "Custom Instructions" section.
+   > "Now it's your turn to customize this file. I want you to tell me a bit about yourself -- we're going to add an 'About the Student' section to the CLAUDE.md so I can tailor everything we do together to YOUR actual work and life. Tell me:
+   >
+   > - What's your name?
+   > - What's your job or role?
+   > - What does your day-to-day work look like?
+   > - What tools or apps do you use most?
+   > - What are you hoping to get out of this course?"
 
-3. **Demonstrate the new behavior.** After the edit is saved, immediately demonstrate the new instruction in your very next response. If they added "end with an encouraging quote," end your response with one. If they added "use emoji when celebrating," throw in some emoji. Show them the cause and effect.
+   Let them answer in whatever format they want. They can answer all at once or one at a time.
 
-4. **Success criteria:** The student has added at least one custom instruction to CLAUDE.md and has seen it take effect in your behavior. Confirm this with them.
+2. **Write their "About the Student" section.** Take what they shared and use the Edit tool to add a new section to the CLAUDE.md file, right after the identity block (the blockquote at the top). Format it like this:
+
+   ```markdown
+   ## About the Student
+
+   - **Name:** [their name]
+   - **Role:** [their job/role]
+   - **Day-to-day:** [what their work looks like]
+   - **Tools they use:** [their tools and apps]
+   - **Goals for this course:** [what they want to get out of it]
+
+   Tailor examples, exercises, and automation suggestions to this student's actual role and workflow. When giving examples, use scenarios from their industry and tools they already use.
+   ```
+
+3. **Show the updated file.** Print the full CLAUDE.md again so they can see their section in context. Point out how their personal information now lives alongside the teaching instructions.
+
+4. **Demonstrate the effect.** Immediately tailor your next response to their role. If they're in marketing, use a marketing example. If they manage a team, reference team workflows. Say something like: "See what just happened? I now know you're a [their role], so from here on out I'll frame everything in terms of [their world]. That's the power of CLAUDE.md -- one edit, and the entire experience shifts."
+
+5. **Success criteria:** The student has an "About the Student" section in CLAUDE.md with their real information, and they've seen Claude use that information to personalize a response.
 
 ---
 
