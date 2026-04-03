@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -q '\\.env'; then echo 'CAUTION: About to edit an environment file containing secrets!'; exit 2; fi",
+            "description": "Warns before editing .env files that might contain secrets"
+          }
+        ]
+      }
+    ]
+  }
+}
