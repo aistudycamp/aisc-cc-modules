@@ -1,6 +1,6 @@
 # AI for Prod — Learning Repo
 
-Welcome to the AI Study Camp hands-on learning experience! This repo will teach you the core building blocks of Claude Code through 7 interactive modules — each one teaches a concept and gives you something to do.
+Welcome to the AI Study Camp hands-on learning experience! This repo will teach you the core building blocks of Claude Code through 8 interactive modules — each one teaches a concept and gives you something to do.
 
 ## Prerequisites
 
@@ -33,12 +33,13 @@ Welcome to the AI Study Camp hands-on learning experience! This repo will teach 
 | Module | Topic | What You'll Do |
 |--------|-------|---------------|
 | 1 | CLAUDE.md | Shape Claude's behavior by editing its instructions |
-| 2 | Skills | Create your own reusable skill from scratch |
-| 3 | Plugins | Install a plugin from the marketplace |
-| 4 | Hooks | Understand automatic behaviors triggered by events |
-| 5 | MCP Servers | Explore how Claude connects to external services |
-| 6 | Memory | Save and retrieve information across conversations |
-| 7 | Automation Planner | Build your personalized automation roadmap |
+| 2 | Best Practices | Learn plan mode, slash commands, and session management |
+| 3 | Skills | Create your own reusable skill from scratch |
+| 4 | Plugins | Install a plugin from the marketplace |
+| 5 | Hooks | Understand automatic behaviors triggered by events |
+| 6 | MCP Servers | Explore how Claude connects to external services |
+| 7 | Memory | Save and retrieve information across conversations |
+| 8 | Automation Planner | Build your personalized automation roadmap |
 
 ## What You'll Walk Away With
 

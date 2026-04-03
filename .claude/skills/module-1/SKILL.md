@@ -76,4 +76,4 @@ Then do these two things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 1: What is CLAUDE.md?` to `- [x] Module 1: What is CLAUDE.md?`
 
 2. **Direct them to the next module:**
-   > "Ready for Module 2? You're going to learn about Skills -- reusable instructions you can give Claude for specific tasks. Type `/module-2` whenever you're ready!"
+   > "Ready for Module 2? You're going to learn the best practices for using Claude Code like a pro -- plan mode, slash commands, and how to pick up where you left off. Type `/module-2` whenever you're ready!"

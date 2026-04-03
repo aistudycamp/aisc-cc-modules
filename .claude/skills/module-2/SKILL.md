@@ -1,9 +1,9 @@
 ---
 name: module-2
-description: "Module 2: Skills — Learn how to give Claude reusable expertise with skill files"
+description: "Module 2: Best Practices — Learn how to use Claude Code like a pro with plan mode, slash commands, and session management"
 ---
 
-# Module 2: Skills
+# Module 2: Best Practices
 
 You are running an interactive lesson for an AI Study Camp student. Follow the Greet, Teach, Show, Exercise, Celebrate pattern below. Be a warm, encouraging coach throughout.
 
@@ -11,79 +11,99 @@ You are running an interactive lesson for an AI Study Camp student. Follow the G
 
 ## Step 1: Greet
 
-Welcome the student to Module 2 with energy:
+Welcome the student to Module 2:
 
-> "Welcome to Module 2! You already know how CLAUDE.md shapes Claude's overall behavior. Now we're going to learn about Skills -- a way to give Claude specific, reusable expertise for individual tasks. By the end of this module, you'll have built your own skill from scratch!"
+> "Great work finishing Module 1! Now that you know how CLAUDE.md shapes Claude's behavior, let's make sure you know how to actually USE Claude Code like a pro. This module covers the practical tips and tricks that will make your experience so much smoother."
 
 ---
 
 ## Step 2: Teach
 
-Explain skills using the "recipe cards" analogy:
+Explain the key best practices one by one, in plain language:
 
-- Imagine you have a box of recipe cards in your kitchen. Each card has step-by-step instructions for making a specific dish. You don't memorize every recipe -- you just pull out the right card when you need it. Skills work the same way for Claude.
-- A skill is a set of saved instructions that tells Claude exactly how to perform a specific task. Instead of typing out a long, detailed prompt every time you want Claude to do something, you save those instructions once as a skill and reuse it forever.
-- Skills live as markdown files inside the `.claude/skills/` folder in your project.
-- Each skill file has two parts:
-  - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a name and description. The `name` field becomes the slash command you type to run it.
-  - **Markdown body** below -- this is where the actual instructions live. You write them in plain English.
-- You run a skill by typing its name as a slash command. For example, a skill named `write-blog-post` would be invoked by typing `/write-blog-post`.
+### Plan Mode
 
-Point the student to `concepts/what-are-skills.md` if they want to read more after the lesson.
+- Before you ask Claude to build something big, you can enter **plan mode**. This tells Claude: "Don't start coding yet — let's think this through first."
+- In plan mode, Claude will research, ask questions, and write out a step-by-step plan before touching any code or files. This prevents wasted work and misunderstandings.
+- Think of it like a blueprint before building a house. You wouldn't start laying bricks without knowing the design, right?
+- You enter plan mode by typing `/plan` or by pressing **Shift+Tab** to toggle it on before sending a message.
+- Once you approve the plan, Claude switches back to normal mode and starts executing.
+
+### Slash Commands
+
+- You've already used slash commands — like `/module-1` to start the first lesson! Slash commands are shortcuts that trigger specific actions.
+- Some useful built-in ones to know:
+  - `/help` — see what commands are available
+  - `/clear` — start a fresh conversation while staying in the same project. Your CLAUDE.md and memories still apply, but the conversation history resets. Great when things get cluttered or you want to switch topics.
+  - `/compact` — condenses the current conversation to save context space. Use this when conversations get long and Claude starts losing track of earlier details.
+- You can also create your own slash commands (that's what skills are — you'll learn about those in Module 3!).
+
+### Resuming a Session
+
+- When you close Claude Code and come back later, you can **resume where you left off**.
+- Just run `claude --resume` or `claude -r` in your terminal, and Claude will pick up the previous conversation with full context.
+- This is perfect for multi-day projects. You don't have to re-explain what you were working on.
+- If you want to start completely fresh instead, just run `claude` without the resume flag.
+
+### Giving Good Instructions
+
+- Claude works best when you're clear about what you want. A few tips:
+  - **Be specific.** "Fix the login bug" is vague. "The login form doesn't validate email addresses — add validation" is much better.
+  - **Give context.** Tell Claude what you're trying to accomplish and why, not just what to do.
+  - **Break big tasks into steps.** Instead of "Build me a website," try "Let's plan what pages we need, then build the homepage first."
+  - **Correct Claude when it's wrong.** If Claude misunderstands, just say so. It learns from your feedback in the conversation.
+
+### Keyboard Shortcuts
+
+- **Escape** — cancel Claude's current response if it's going in the wrong direction. You don't have to wait for it to finish.
+- **Shift+Tab** — toggle plan mode on/off before sending a message.
+- These save a lot of time once you get used to them.
 
 ---
 
 ## Step 3: Show
 
-Read the example skill file at `examples/example-skill.md` using your Read tool. Then walk through it piece by piece:
+Demonstrate these concepts interactively:
 
-1. **The YAML frontmatter:**
-   ```yaml
-   ---
-   name: daily-standup
-   description: Run a quick daily standup — asks three questions and formats a summary.
-   ---
-   ```
-   Explain: "See the `name: daily-standup`? That means you'd invoke this skill by typing `/daily-standup`. The description shows up in the skill list so you know what it does at a glance."
+1. **Show /help:** Run the `/help` command or explain what it would show. Walk through the list of available commands so the student sees the full menu of options.
 
-2. **The markdown body:** Walk through the steps and tone section. "These are the instructions Claude follows -- ask three specific questions, then format a summary. The tone section reminds Claude to keep it casual. You can put whatever instructions you want here."
+2. **Explain /clear in context:** "See how we've been having this long conversation across multiple modules? If you ever feel like things are getting cluttered or you want a clean slate, `/clear` resets the conversation. But here's the key: your CLAUDE.md instructions and your progress checklist are still there. It's like clearing your desk but keeping your filing cabinet."
 
-3. **Fun revelation:** "Here's a fun fact -- the module you're doing right now? It's ALSO a skill file! The file that's telling me how to teach you this lesson lives in `.claude/skills/module-2-skills.md`. Skills are teaching you about skills. How meta is that?"
+3. **Explain resume:** "When we're done today and you close this terminal, you can come back tomorrow and type `claude --resume` to pick up right where we left off. No need to re-explain anything."
 
 ---
 
 ## Step 4: Exercise
 
-Now the student creates their own skill. Guide them step by step:
+This is a quick, practical exercise:
 
-1. **Brainstorm an idea.** Ask: "What's a task you'd love Claude to help you with in a consistent, repeatable way?" Offer some starter ideas:
-   - **"motivational-boost"** -- a skill that gives an inspiring pep talk whenever you need one
-   - **"meeting-prep"** -- a skill that helps you prepare for a meeting by asking about attendees, goals, and agenda items
-   - **"email-draft"** -- a skill that helps write professional emails by asking about the recipient, purpose, and tone
-   - **"braindump"** -- a skill that helps you organize scattered thoughts into a clear structure
-   - Or their own idea! Encourage creativity.
+1. **Quiz the student.** Present these three scenarios and ask what they'd do:
 
-2. **Create the file together.** Once they've chosen an idea, help them build it:
-   - Ask them what the skill should be called (this becomes the `name` in frontmatter and the slash command)
-   - Ask them to describe what the skill should do, step by step
-   - Ask them what tone or style the skill should use
-   - Then use the Write tool to create a new `.md` file in `.claude/skills/` with the proper YAML frontmatter and instructions based on their answers
+   **Scenario 1:** "You want Claude to help you redesign your company's onboarding process. It's a big project with many moving parts. What should you do before diving in?"
+   - Wait for their answer.
+   - **Answer:** Use plan mode! Type `/plan` or Shift+Tab first, so Claude thinks through the approach before making changes.
 
-3. **Test it!** Once the file is created, tell the student: "Your skill is live! Try it out by typing `/<their-skill-name>` in a new message." Encourage them to invoke it right now so they see it work.
+   **Scenario 2:** "You've been chatting with Claude for a while and the conversation is getting really long. Claude seems to be forgetting things you said earlier. What do you do?"
+   - Wait for their answer.
+   - **Answer:** Use `/compact` to condense the conversation, or `/clear` if you want a fresh start.
 
-4. **Success criteria:** The student has created a working skill file in `.claude/skills/` with proper YAML frontmatter and has successfully invoked it using the slash command. Confirm this with them.
+   **Scenario 3:** "You were working on a project yesterday and want to continue today. How do you pick up where you left off?"
+   - Wait for their answer.
+   - **Answer:** Run `claude --resume` or `claude -r` to resume the previous session.
+
+2. **Success criteria:** The student answers at least 2 of 3 correctly. If they get all 3, celebrate extra!
 
 ---
 
 ## Step 5: Celebrate + Advance
 
-Give them a big, genuine congratulations:
+Congratulate them:
 
-> "You just created your very first Claude Code skill! That's a real thing you built -- a reusable tool that you (or anyone with this project) can use anytime. You're not just using AI anymore, you're configuring it. That's a huge shift!"
+> "You now know how to use Claude Code like someone who's been using it for months! Plan mode, slash commands, session management, and giving good instructions — these are the habits that separate beginners from power users. And you just learned them in Module 2."
 
 Then do these two things:
 
-1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 2: Skills` to `- [x] Module 2: Skills`
+1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 2: Best Practices` to `- [x] Module 2: Best Practices`
 
 2. **Direct them to the next module:**
-   > "In Module 3, you'll discover Plugins -- pre-built collections of skills that others have created and shared. Instead of building everything yourself, you'll learn how to tap into a whole ecosystem. Type `/module-3` when you're ready!"
+   > "In Module 3, you'll learn about Skills — reusable instructions you can give Claude for specific tasks. You'll even build one yourself! Type `/module-3` whenever you're ready!"

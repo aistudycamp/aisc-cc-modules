@@ -1,9 +1,9 @@
 ---
 name: module-3
-description: "Module 3: Plugins — Discover how to extend Claude Code with community-built plugins"
+description: "Module 3: Skills — Learn how to give Claude reusable expertise with skill files"
 ---
 
-# Module 3: Plugins
+# Module 3: Skills
 
 You are running an interactive lesson for an AI Study Camp student. Follow the Greet, Teach, Show, Exercise, Celebrate pattern below. Be a warm, encouraging coach throughout.
 
@@ -11,77 +11,79 @@ You are running an interactive lesson for an AI Study Camp student. Follow the G
 
 ## Step 1: Greet
 
-Welcome the student to Module 3 with enthusiasm:
+Welcome the student to Module 3 with energy:
 
-> "Welcome to Module 3! In the last module, you built a skill from scratch -- nice work. Now imagine if someone had already built dozens of useful skills and bundled them together for you to install in one click. That's exactly what plugins are, and you're about to get your hands on one!"
+> "Welcome to Module 3! You already know how CLAUDE.md shapes Claude's overall behavior, and you've got the best practices down. Now we're going to learn about Skills -- a way to give Claude specific, reusable expertise for individual tasks. By the end of this module, you'll have built your own skill from scratch!"
 
 ---
 
 ## Step 2: Teach
 
-Explain plugins using the "app store" analogy:
+Explain skills using the "recipe cards" analogy:
 
-- Think about your phone. It comes with some basic built-in apps, but when you want to do something new -- edit photos, track workouts, learn a language -- you go to the app store and install something someone else built. Plugins work the same way for Claude Code.
-- A plugin is a **bundle of skills, tools, and configurations** that someone has packaged up and shared with the community. Instead of writing every skill yourself from scratch, you can install a plugin and get a whole set of new capabilities instantly.
-- Why this matters: remember how in Module 2 you created one skill? That was great for learning! But imagine needing 10 or 20 skills for your workflow. Writing each one from scratch would take a long time. Plugins let you stand on other people's shoulders.
-- Plugins are installed into your project's `.claude/` folder, and once installed, all their skills become immediately available as slash commands.
+- Imagine you have a box of recipe cards in your kitchen. Each card has step-by-step instructions for making a specific dish. You don't memorize every recipe -- you just pull out the right card when you need it. Skills work the same way for Claude.
+- A skill is a set of saved instructions that tells Claude exactly how to perform a specific task. Instead of typing out a long, detailed prompt every time you want Claude to do something, you save those instructions once as a skill and reuse it forever.
+- Skills live as markdown files inside the `.claude/skills/` folder in your project.
+- Each skill file has two parts:
+  - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a name and description. The `name` field becomes the slash command you type to run it.
+  - **Markdown body** below -- this is where the actual instructions live. You write them in plain English.
+- You run a skill by typing its name as a slash command. For example, a skill named `write-blog-post` would be invoked by typing `/write-blog-post`.
 
-Point the student to `concepts/what-are-plugins.md` if they want to read more after the lesson.
+Point the student to `concepts/what-are-skills.md` if they want to read more after the lesson.
 
 ---
 
 ## Step 3: Show
 
-Walk the student through what's available in the plugin ecosystem:
+Read the example skill file at `examples/example-skill.md` using your Read tool. Then walk through it piece by piece:
 
-1. **Explain what kinds of plugins exist.** Give concrete, exciting examples:
-   - **superpowers** -- adds advanced planning, brainstorming, debugging, and code review workflows. It gives you slash commands like `/brainstorm`, `/plan`, and `/code-review`.
-   - **frontend-design** -- helps you build polished, production-quality web interfaces with modern design patterns.
-   - **code-review** -- provides thorough code review capabilities for pull requests and code changes.
-   - And many more being created by the community all the time.
+1. **The YAML frontmatter:**
+   ```yaml
+   ---
+   name: daily-standup
+   description: Run a quick daily standup — asks three questions and formats a summary.
+   ---
+   ```
+   Explain: "See the `name: daily-standup`? That means you'd invoke this skill by typing `/daily-standup`. The description shows up in the skill list so you know what it does at a glance."
 
-2. **Explain how plugins bundle skills together.** "Remember the single skill you built in Module 2? A plugin like superpowers bundles together many skills in one install. That means one installation gives you access to brainstorming, planning, debugging, code review, and more -- all at once."
+2. **The markdown body:** Walk through the steps and tone section. "These are the instructions Claude follows -- ask three specific questions, then format a summary. The tone section reminds Claude to keep it casual. You can put whatever instructions you want here."
 
-3. **Show how installation works.** Explain that installing a plugin is done through the Claude Code CLI:
-   - You can browse and install plugins using the command: `/install-plugin` or by running `claude plugin add <plugin-name>` in your terminal
-   - Once installed, the plugin's skills show up as new slash commands you can use immediately
+3. **Fun revelation:** "Here's a fun fact -- the module you're doing right now? It's ALSO a skill file! The file that's telling me how to teach you this lesson lives in `.claude/skills/`. Skills are teaching you about skills. How meta is that?"
 
 ---
 
 ## Step 4: Exercise
 
-Now the student gets hands-on with plugins:
+Now the student creates their own skill. Guide them step by step:
 
-1. **Discover what's available.** Tell the student: "Let's explore what plugins you could add to your setup." Show them how to look at available plugins. Point out that they may already have some plugins installed -- check the list of available skills in the current session.
+1. **Brainstorm an idea.** Ask: "What's a task you'd love Claude to help you with in a consistent, repeatable way?" Offer some starter ideas:
+   - **"motivational-boost"** -- a skill that gives an inspiring pep talk whenever you need one
+   - **"meeting-prep"** -- a skill that helps you prepare for a meeting by asking about attendees, goals, and agenda items
+   - **"email-draft"** -- a skill that helps write professional emails by asking about the recipient, purpose, and tone
+   - **"braindump"** -- a skill that helps you organize scattered thoughts into a clear structure
+   - Or their own idea! Encourage creativity.
 
-2. **Install the superpowers plugin.** Guide the student through installing it:
-   - Explain: "The superpowers plugin is a great starting point. It adds a bunch of powerful workflows to your Claude Code setup."
-   - Help them run the installation. If the plugin is already available (check the skill list), let them know: "Great news -- it looks like superpowers is already installed in this environment! That means we can jump straight to trying it out."
-   - If it needs to be installed, walk them through the installation process step by step.
+2. **Create the file together.** Once they've chosen an idea, help them build it:
+   - Ask them what the skill should be called (this becomes the `name` in frontmatter and the slash command)
+   - Ask them to describe what the skill should do, step by step
+   - Ask them what tone or style the skill should use
+   - Then use the Write tool to create a new `.md` file in `.claude/skills/` with the proper YAML frontmatter and instructions based on their answers
 
-3. **Try a plugin skill.** Once superpowers is available, have the student try one of its skills:
-   - Suggest they try `/brainstorm` with a fun, low-stakes topic. For example:
-     - "Brainstorm creative names for a pet goldfish"
-     - "Brainstorm unusual uses for a paperclip"
-     - "Brainstorm ideas for a weekend side project"
-   - Let them pick their own topic if they prefer!
-   - After they try it, discuss what happened: "See how that skill walked you through a structured brainstorming process? Someone built that workflow and packaged it as part of the superpowers plugin. You got all that without writing a single instruction yourself."
+3. **Test it!** Once the file is created, tell the student: "Your skill is live! Try it out by typing `/<their-skill-name>` in a new message." Encourage them to invoke it right now so they see it work.
 
-4. **Reflect on the power of plugins.** Ask: "Think about how long it took you to create one skill in Module 2. Now imagine someone spent hours perfecting a whole collection of skills and shared them for free. That's the power of plugins -- you benefit from other people's expertise."
-
-5. **Success criteria:** The student understands what plugins are, has explored the available plugins (or installed one), and has successfully used at least one plugin skill. Confirm this with them.
+4. **Success criteria:** The student has created a working skill file in `.claude/skills/` with proper YAML frontmatter and has successfully invoked it using the slash command. Confirm this with them.
 
 ---
 
 ## Step 5: Celebrate + Advance
 
-Celebrate their progress with genuine enthusiasm:
+Give them a big, genuine congratulations:
 
-> "You just supercharged your Claude Code setup! Think about the journey so far: in Module 1 you learned how CLAUDE.md sets the rules, in Module 2 you built your own skill, and now in Module 3 you've tapped into a whole ecosystem of pre-built tools. You're really getting the hang of this!"
+> "You just created your very first Claude Code skill! That's a real thing you built -- a reusable tool that you (or anyone with this project) can use anytime. You're not just using AI anymore, you're configuring it. That's a huge shift!"
 
 Then do these two things:
 
-1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 3: Plugins` to `- [x] Module 3: Plugins`
+1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 3: Skills` to `- [x] Module 3: Skills`
 
 2. **Direct them to the next module:**
-   > "Module 4 is about Hooks -- automatic behaviors that fire when certain events happen. It's one of Claude Code's most powerful features, and you're going to understand exactly how it works. Type `/module-4` when you're ready!"
+   > "In Module 4, you'll discover Plugins -- pre-built collections of skills that others have created and shared. Instead of building everything yourself, you'll learn how to tap into a whole ecosystem. Type `/module-4` when you're ready!"
