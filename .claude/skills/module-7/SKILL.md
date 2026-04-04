@@ -100,11 +100,15 @@ This is a big moment — give it the enthusiasm it deserves:
 >
 > That's the complete toolkit. You understand every major building block. That's genuinely impressive — give yourself some credit!"
 
-Then update the progress checklist in CLAUDE.md by changing Module 7 from `[ ]` to `[x]`:
-```
-- [x] Module 7: Memory
-```
+Then do these three things:
 
-Direct them to the capstone with excitement and energy:
+1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 7: Memory` to `- [x] Module 7: Memory`
 
-> "Now it's time for the grand finale — Module 8: the Automation Planner! This is where you take everything you've learned and apply it to YOUR work and life. You're going to brainstorm, analyze, and walk away with a personalized automation roadmap. It's the most hands-on module yet, and honestly, it's the most fun. Type `module-8` when you're ready — let's do this!"
+2. **Save their work with git.** Run the following commands (use the Bash tool):
+   - `git add -A`
+   - `git commit -m "Complete Module 7 — learned how Claude remembers across sessions"`
+
+   Tell the student: "Progress saved!"
+
+3. **Direct them to the capstone with excitement and energy:**
+   > "Now it's time for the grand finale — Module 8: the Automation Planner! This is where you take everything you've learned and apply it to YOUR work and life. You're going to brainstorm, analyze, and walk away with a personalized automation roadmap. It's the most hands-on module yet, and honestly, it's the most fun. Type `module-8` when you're ready — let's do this!"

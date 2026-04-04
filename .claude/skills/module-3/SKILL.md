@@ -81,9 +81,15 @@ Give them a big, genuine congratulations:
 
 > "You just created your very first Claude Code skill! That's a real thing you built -- a reusable tool that you (or anyone with this project) can use anytime. You're not just using AI anymore, you're configuring it. That's a huge shift!"
 
-Then do these two things:
+Then do these three things:
 
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 3: Skills` to `- [x] Module 3: Skills`
 
-2. **Direct them to the next module:**
+2. **Save their work with git.** Run the following commands (use the Bash tool):
+   - `git add -A`
+   - `git commit -m "Complete Module 3 — created my first custom skill"`
+
+   Tell the student: "Progress saved!"
+
+3. **Direct them to the next module:**
    > "In Module 4, you'll discover Plugins -- pre-built collections of skills that others have created and shared. Instead of building everything yourself, you'll learn how to tap into a whole ecosystem. Type `module-4` when you're ready!"

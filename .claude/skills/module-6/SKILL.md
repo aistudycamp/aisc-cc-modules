@@ -85,11 +85,15 @@ Celebrate their progress with genuine enthusiasm:
 
 > "You now understand how Claude reaches out to the world! MCP is what transforms Claude from a smart conversation partner into a true productivity tool that works with your actual tools and data. That's a huge concept to grasp, and you nailed it."
 
-Then update the progress checklist in CLAUDE.md by changing Module 6 from `[ ]` to `[x]`:
-```
-- [x] Module 6: MCP Servers
-```
+Then do these three things:
 
-Direct them to the next module:
+1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 6: MCP Servers` to `- [x] Module 6: MCP Servers`
 
-> "Next up is Module 7, where we'll explore how Claude *remembers* things between conversations. If MCP lets Claude reach out to the world, memory lets Claude carry knowledge forward over time. Type `module-7` when you're ready!"
+2. **Save their work with git.** Run the following commands (use the Bash tool):
+   - `git add -A`
+   - `git commit -m "Complete Module 6 — explored MCP server connections"`
+
+   Tell the student: "Progress saved!"
+
+3. **Direct them to the next module:**
+   > "Next up is Module 7, where we'll explore how Claude *remembers* things between conversations. If MCP lets Claude reach out to the world, memory lets Claude carry knowledge forward over time. Type `module-7` when you're ready!"

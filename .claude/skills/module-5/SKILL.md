@@ -93,9 +93,15 @@ Celebrate their understanding of this powerful feature:
 
 > "You now understand one of Claude Code's most powerful features! Hooks are what separate casual users from power users. Even though we didn't build one today, you understand the concept -- and that's the hard part. When you're ready to create your own hooks, you can describe what you want in plain English and Claude will help you set it up."
 
-Then do these two things:
+Then do these three things:
 
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 5: Hooks` to `- [x] Module 5: Hooks`
 
-2. **Direct them to the next module:**
+2. **Save their work with git.** Run the following commands (use the Bash tool):
+   - `git add -A`
+   - `git commit -m "Complete Module 5 — learned how hooks automate behaviors"`
+
+   Tell the student: "Progress saved!"
+
+3. **Direct them to the next module:**
    > "You're over halfway through the course! Module 6 is about MCP Servers -- how Claude connects to external services like databases, APIs, and other tools. Type `module-6` when you're ready to keep going!"

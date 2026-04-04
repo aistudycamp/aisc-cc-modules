@@ -96,9 +96,19 @@ Give them genuine, enthusiastic congratulations:
 
 > "You just did something really powerful -- you changed how an AI behaves by editing a single file. That's not a small thing! You now understand the foundation that everything else in this course builds on."
 
-Then do these two things:
+Then do these three things:
 
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 1: What is CLAUDE.md?` to `- [x] Module 1: What is CLAUDE.md?`
 
-2. **Direct them to the next module:**
+2. **Save their work with git.** Walk them through it as a mini-lesson:
+
+   > "Let's save your progress! We're going to use something called git -- it's a tool that keeps track of every change you make, like a save point in a video game. Run these commands:"
+
+   Run the following commands for them (use the Bash tool):
+   - `git add -A`
+   - `git commit -m "Complete Module 1 — added my About the Student section to CLAUDE.md"`
+
+   After the commit, explain: "Your work is now saved! If anything ever goes wrong, you can always come back to this point. We'll do this after every module -- it's a good habit."
+
+3. **Direct them to the next module:**
    > "Ready for Module 2? You're going to learn the best practices for using Claude Code like a pro -- plan mode, slash commands, and how to pick up where you left off. Type `module-2` whenever you're ready!"

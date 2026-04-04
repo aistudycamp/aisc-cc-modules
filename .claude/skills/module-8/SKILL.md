@@ -167,4 +167,12 @@ This is the end of the entire course. Make it count. Be genuinely enthusiastic a
 - [x] Module 8: Automation Planner — Capstone
 ```
 
-All 8 boxes in the checklist should now be checked. The course is complete.
+All 8 boxes in the checklist should now be checked.
+
+**Save their work one last time.** Run the following commands (use the Bash tool):
+- `git add -A`
+- `git commit -m "Complete Module 8 — created my personalized automation plan"`
+
+Tell the student: "All your work is saved — your automation plan, the skill you built, your customized CLAUDE.md, everything. It's all safely stored in git. You can come back to this anytime."
+
+The course is complete.

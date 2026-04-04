@@ -79,9 +79,15 @@ Celebrate their progress with genuine enthusiasm:
 
 > "You just supercharged your Claude Code setup! Think about the journey so far: in Module 1 you learned how CLAUDE.md sets the rules, in Module 2 you learned best practices, in Module 3 you built your own skill, and now in Module 4 you've tapped into a whole ecosystem of pre-built tools. You're really getting the hang of this!"
 
-Then do these two things:
+Then do these three things:
 
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 4: Plugins` to `- [x] Module 4: Plugins`
 
-2. **Direct them to the next module:**
+2. **Save their work with git.** Run the following commands (use the Bash tool):
+   - `git add -A`
+   - `git commit -m "Complete Module 4 — explored and installed plugins"`
+
+   Tell the student: "Progress saved!"
+
+3. **Direct them to the next module:**
    > "Module 5 is about Hooks -- automatic behaviors that fire when certain events happen. It's one of Claude Code's most powerful features, and you're going to understand exactly how it works. Type `module-5` when you're ready!"

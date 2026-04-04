@@ -101,9 +101,15 @@ Congratulate them:
 
 > "You now know how to use Claude Code like someone who's been using it for months! Plan mode, slash commands, session management, and giving good instructions — these are the habits that separate beginners from power users. And you just learned them in Module 2."
 
-Then do these two things:
+Then do these three things:
 
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 2: Best Practices` to `- [x] Module 2: Best Practices`
 
-2. **Direct them to the next module:**
+2. **Save their work with git.** Run the following commands (use the Bash tool):
+   - `git add -A`
+   - `git commit -m "Complete Module 2 — learned Claude Code best practices"`
+
+   Tell the student: "Progress saved! See? Same two commands every time. Easy."
+
+3. **Direct them to the next module:**
    > "In Module 3, you'll learn about Skills — reusable instructions you can give Claude for specific tasks. You'll even build one yourself! Type `module-3` whenever you're ready!"
