@@ -22,9 +22,9 @@ Welcome the student to Module 4 with enthusiasm:
 Explain plugins using the "app store" analogy:
 
 - Think about your phone. It comes with some basic built-in apps, but when you want to do something new -- edit photos, track workouts, learn a language -- you go to the app store and install something someone else built. Plugins work the same way for Claude Code.
-- A plugin is a **bundle of skills, tools, and configurations** that someone has packaged up and shared with the community. Instead of writing every skill yourself from scratch, you can install a plugin and get a whole set of new capabilities instantly.
-- Why this matters: remember how in Module 3 you created one skill? That was great for learning! But imagine needing 10 or 20 skills for your workflow. Writing each one from scratch would take a long time. Plugins let you stand on other people's shoulders.
-- Plugins are installed into your project's `.claude/` folder, and once installed, all their skills become immediately available as slash commands.
+- A plugin is the **packaging layer** for Claude Code extensions. It can bundle together skills, hooks, MCP server connections, and configurations into a single installable unit. Instead of setting everything up yourself from scratch, you install a plugin and get a whole set of new capabilities instantly.
+- Why this matters: remember how in Module 3 you created one skill? That was great for learning! But imagine needing 10 or 20 skills for your workflow, plus hooks to automate things, plus MCP connections to your tools. Writing and configuring each one from scratch would take a long time. Plugins let you stand on other people's shoulders.
+- Plugins are installed into your project's `.claude/` folder, and once installed, all their features become immediately available. Plugin skills are namespaced (like `superpowers:brainstorm`) so multiple plugins can coexist without conflicting.
 
 Point the student to `concepts/what-are-plugins.md` if they want to read more after the lesson.
 

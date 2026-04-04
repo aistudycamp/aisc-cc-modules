@@ -31,7 +31,8 @@ Explain hooks using the "automatic rules" analogy:
   - **PostToolUse** -- fires AFTER Claude uses a tool. Great for cleaning up, formatting, or running tests.
   - **SessionStart** -- fires when a new Claude Code session begins. Great for showing reminders or setting things up.
   - **Notification** -- fires when Claude sends a notification. Great for logging or routing alerts.
-- Hooks are powerful because they work silently in the background. You don't have to remember to run them -- they just happen.
+- Here's the key thing that makes hooks different from everything else you've learned: **hooks run outside of Claude's thinking entirely.** They are plain scripts -- no AI involved. Claude doesn't decide whether to run them or how to run them. They just fire automatically when the trigger event happens. This makes them completely predictable and reliable.
+- Hooks are powerful because they work silently in the background. You don't have to remember to run them -- they just happen. And they cost zero context -- they don't take up any of Claude's attention or memory.
 
 Point the student to `concepts/what-are-hooks.md` if they want to read more after the lesson.
 

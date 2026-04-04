@@ -19,15 +19,17 @@ Welcome the student to Module 3 with energy:
 
 ## Step 2: Teach
 
-Explain skills using the "recipe cards" analogy:
+Explain skills using the "recipe cards and reference guides" analogy:
 
 - Imagine you have a box of recipe cards in your kitchen. Each card has step-by-step instructions for making a specific dish. You don't memorize every recipe -- you just pull out the right card when you need it. Skills work the same way for Claude.
-- A skill is a set of saved instructions that tells Claude exactly how to perform a specific task. Instead of typing out a long, detailed prompt every time you want Claude to do something, you save those instructions once as a skill and reuse it forever.
-- Skills live as markdown files inside the `.claude/skills/` folder in your project.
+- A skill is a markdown file that gives Claude reusable knowledge or workflows. There are two kinds:
+  - **Action skills** -- workflows you trigger, like a deployment checklist or a meeting prep routine. Think of these as the recipe cards.
+  - **Reference skills** -- knowledge Claude draws on when relevant, like an API style guide or your team's coding conventions. Think of these as a reference book on the shelf -- Claude grabs it when it's useful.
+- Skills live as markdown files inside the `.claude/skills/` folder in your project (each in its own subdirectory with a `SKILL.md` file).
 - Each skill file has two parts:
   - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a name and description. The `name` field becomes the command you type to run it.
   - **Markdown body** below -- this is where the actual instructions live. You write them in plain English.
-- You run a skill by typing its name. For example, a skill named `write-blog-post` would be invoked by typing `write-blog-post`.
+- You run an action skill by typing its name. For example, a skill named `write-blog-post` would be invoked by typing `write-blog-post`. Reference skills load automatically when Claude thinks they're relevant -- you don't need to invoke them.
 
 Point the student to `concepts/what-are-skills.md` if they want to read more after the lesson.
 

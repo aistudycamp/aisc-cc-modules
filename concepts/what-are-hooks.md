@@ -4,7 +4,7 @@
 
 Hooks are like **automatic rules you set on your phone**: "When I arrive at work, turn on Wi-Fi" or "When it's 9 AM, turn on Do Not Disturb." You define the trigger and the action once, and it runs automatically every time.
 
-In Claude Code, hooks are automatic actions that fire when specific events happen during your session. You don't have to remember to run them -- they just happen in the background.
+In Claude Code, hooks are **deterministic scripts** that fire when specific events happen during your session. The key difference from everything else: **hooks run outside of Claude's reasoning entirely -- no AI involved.** They are plain scripts that execute predictably every time. You don't have to remember to run them -- they just happen in the background, and they use zero context.
 
 ## Why does it matter?
 

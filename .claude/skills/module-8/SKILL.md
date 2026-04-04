@@ -87,8 +87,19 @@ For each row, evaluate:
 - **Medium** — Needs MCP integrations, multiple tools working together, or some configuration.
 - **Hard** — Requires custom development, API work, or significant technical effort.
 
-**Tools Needed** — Which Claude Code features from the course would this use?
-Reference the modules by name: CLAUDE.md, Custom Skill, Plugin, Hook, MCP Server, Memory — or combinations of several.
+**Tools Needed** — Which Claude Code features from the course would this use? Use this decision guide to match each idea to the right feature:
+
+| If the automation needs... | Use... |
+|---|---|
+| Claude to always follow a rule or know something | **CLAUDE.md** — always-on context |
+| A repeatable workflow you trigger on demand | **Custom Skill** — action skill |
+| Knowledge Claude should reference when relevant | **Custom Skill** — reference skill |
+| Connection to an external tool (email, calendar, database) | **MCP Server** |
+| Something to happen automatically on an event | **Hook** — deterministic, no AI involved |
+| A pre-built collection of capabilities | **Plugin** |
+| Claude to remember preferences over time | **Memory** |
+
+Many automations will need a combination — for example, an MCP connection to your email PLUS a custom skill that knows your writing style.
 
 **After the table, add a Quick Wins section:**
 
