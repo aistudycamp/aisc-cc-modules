@@ -2,9 +2,11 @@
 
 ## What is it?
 
-Think of MCP as **universal remote adapters**. You know how different TVs, sound bars, and streaming boxes each come with their own remote? MCP is like a universal system that lets one remote (Claude) control all of them. Each adapter connects Claude to a different tool or service.
+So far, everything you've learned has been about what happens *inside* Claude — shaping its behavior, giving it skills, automating with hooks. But what if Claude could reach *out* and interact with your actual tools — your email, your calendar, your browser?
 
-MCP stands for Model Context Protocol. It's a standard way for Claude to plug into external tools and services -- like your email, calendar, browser, or databases -- so it can read from and interact with them directly.
+That's what MCP makes possible. Think of it as **universal remote adapters**. You know how different TVs, sound bars, and streaming boxes each come with their own remote? MCP is like a universal system that lets one remote (Claude) control all of them. Each adapter connects Claude to a different tool or service.
+
+MCP stands for **Model Context Protocol** — but you don't need to memorize that. Here's what each word means in plain language: **Model** = the AI (Claude). **Context** = the information and tools it can access. **Protocol** = a standard way of connecting. Put it together: a standard way to connect Claude to outside tools.
 
 ## Why does it matter?
 
@@ -12,10 +14,13 @@ Without MCP, Claude can only work with what you paste into the conversation. Wit
 
 ## How does it work?
 
-- MCP uses a **client-server model**: Claude is the client, and each external tool runs a small server
-- You configure which MCP servers to connect in your project settings
-- Once connected, Claude can use that tool's capabilities just like any built-in feature
-- Each MCP server is built to handle one service (email, calendar, browser, etc.)
+Here's the basic pattern:
+
+1. **Someone builds an adapter** for a specific tool (Gmail, Google Calendar, a database, etc.). This adapter is called an MCP server — it knows how to talk to that tool.
+2. **You plug the adapter in** by adding it to your project settings. You do it once, and it's connected.
+3. **Claude uses the tool through the adapter.** When you ask "What's on my calendar today?", Claude sends that question to the calendar adapter, gets the answer, and reports back.
+
+The key idea: Claude asks, the adapter answers. You can plug in as many adapters as you want — one for email, one for your calendar, one for a database — and Claude can use all of them. People are building new adapters all the time, which means Claude keeps getting more capable.
 
 ## Real-world examples
 
@@ -23,3 +28,9 @@ Without MCP, Claude can only work with what you paste into the conversation. Wit
 - **Google Calendar MCP:** Have Claude check your availability and suggest meeting times
 - **Browser MCP:** Let Claude visit web pages, fill out forms, and take screenshots
 - **Database MCP:** Allow Claude to query your data and pull reports without you writing any code
+
+## Quick check
+
+A coworker asks you: "How is an MCP server different from just pasting information into the chat?" What would you tell them?
+
+*(The key difference: pasting gives Claude a snapshot of old information. An MCP server gives Claude live access — it can look things up right now, not just read what you copied.)*

@@ -22,12 +22,12 @@ Key terms you'll encounter in the AI Study Camp, in plain language.
 
 **Prompt** -- The text you type to tell Claude what you want it to do. A good prompt is clear, specific, and includes relevant context.
 
-**Repository (Repo)** -- A folder that contains all the files for a project, along with the history of every change made. Hosted on platforms like GitHub.
+**Repository (Repo)** -- A project folder that lives on a platform like GitHub. It contains all your files plus a built-in "undo history" that tracks every change anyone has ever made — so you can always go back to an earlier version.
 
 **Skill** -- A saved set of instructions that tells Claude how to perform a specific task, like writing a blog post or analyzing data. Invoked with a slash command.
 
 **Slash command** -- A shortcut that starts with `/` (like `/write-blog-post`) used to trigger a skill or built-in action in Claude Code.
 
-**Subagent** -- A second instance of Claude that the main Claude spawns to handle a specific subtask in parallel, like a manager delegating work to a teammate.
+**Subagent** -- A second Claude that the first one sends off to handle a specific job, like a manager asking a teammate to look into something while they keep working on the main task.
 
-**Token** -- The smallest unit of text Claude processes. Roughly, one token equals about three-quarters of a word. Tokens determine how much fits in the context window and how usage is measured.
+**Token** -- The smallest unit of text Claude processes. For example, the word "hamburger" is 3 tokens, and the sentence "I love cats" is 3 tokens. Tokens determine how much fits in the context window and how usage is measured — think of them as the "units" Claude counts in.
