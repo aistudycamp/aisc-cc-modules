@@ -7,7 +7,7 @@ You've been telling Claude "use a friendly tone, keep it under 300 words, includ
 That's what skills are. Think of them as **recipe cards** for Claude. Each one has step-by-step instructions for a specific task. Instead of re-explaining yourself, you just tell Claude which recipe card to grab.
 
 There are two kinds:
-- **Action skills** — workflows you trigger by name, like pulling out a recipe card. ("Hey Claude, run `write-blog-post`.")
+- **Action skills** — workflows you trigger by name, like pulling out a recipe card. ("Hey Claude, run `/write-blog-post`.")
 - **Reference skills** — knowledge Claude draws on automatically when relevant, like a style guide sitting on the shelf. You don't invoke them — Claude just reaches for them when they're useful.
 
 ## Why does it matter?
@@ -33,7 +33,7 @@ Ask the user these three questions, one at a time:
 Then format the answers into a clean summary.
 ```
 
-The part between the `---` lines is the label on the recipe card (its name and what it does). Everything below is the recipe itself — plain English instructions that Claude follows. You'd run this one by typing `daily-standup`.
+The part between the `---` lines is the label on the recipe card (its name and what it does). Everything below is the recipe itself — plain English instructions that Claude follows. You'd run this one by typing `/daily-standup`.
 
 ## How does it work?
 

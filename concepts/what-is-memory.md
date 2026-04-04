@@ -21,7 +21,7 @@ Memory means you stop repeating yourself. Instead of re-explaining your project,
 ## How does it work?
 
 - During a conversation, when Claude notices something worth remembering (a preference, a decision, a fact about your work), it saves it as a short, clear note
-- These notes are stored as small text files in a `.claude/` folder in your project — you can open them in any text editor
+- These notes are stored as small text files on your computer — you can open them in any text editor, and they stay on your machine (they're not sent anywhere)
 - When a new session starts, Claude checks for relevant memories and naturally incorporates them
 - You're always in control — you can review, edit, or delete any memory anytime
 

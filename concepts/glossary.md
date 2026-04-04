@@ -10,7 +10,7 @@ Key terms you'll encounter in the AI Study Camp, in plain language.
 
 **Clone** -- Making a copy of a project (repository) from the internet onto your own computer so you can work with it locally.
 
-**Context window** -- The total amount of text Claude can "see" in a single conversation, including your messages, Claude's replies, and any files it reads. When the window fills up, older content gets pushed out.
+**Context window** -- The total amount of text Claude can "see" in a single conversation, including your messages, Claude's replies, and any files it reads. When the window fills up, older content gets summarized to make room — key decisions and code are preserved.
 
 **Hook** -- An automatic action that runs when a specific event happens, like formatting code every time a file is saved. Configured in your project settings.
 

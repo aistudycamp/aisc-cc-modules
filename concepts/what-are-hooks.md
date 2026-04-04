@@ -21,14 +21,22 @@ Hooks are configured in a settings file. Don't worry about the exact format — 
 ```json
 {
   "hooks": {
-    "afterToolUse": [
-      { "command": "npx prettier --write $FILE", "match_tool": "write" }
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write"
+          }
+        ]
+      }
     ]
   }
 }
 ```
 
-Let's read it in plain English: "**After** Claude uses the **write** tool (creates a file), automatically **clean up the formatting** of that file." That's it — an event and an action. The `match_tool` part narrows it down to only fire for a specific tool, so it doesn't run on *everything*.
+Let's read it in plain English: "**After** (`PostToolUse`) Claude uses the **Write** tool (creates a file), automatically **clean up the formatting**." That's it — an event and an action. The `matcher` narrows it down to only fire for a specific tool, so it doesn't run on *everything*.
 
 Available triggers include:
 - **Before a tool runs** — great for safety checks ("warn me before editing sensitive files")
