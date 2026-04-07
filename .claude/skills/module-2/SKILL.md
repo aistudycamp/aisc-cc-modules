@@ -53,6 +53,13 @@ Explain the key best practices one by one, in plain language:
   - **Break big tasks into steps.** Instead of "Build me a website," try "Let's plan what pages we need, then build the homepage first."
   - **Correct Claude when it's wrong.** If Claude misunderstands, just say so. It learns from your feedback in the conversation.
 
+### Search Before You Build
+
+- Before you spend time creating something from scratch, check if someone else has already built it. Claude Code has a growing ecosystem of skills, plugins, and community tools.
+- You can ask Claude things like: "Is there a skill for writing blog posts?" or "Find me a plugin that helps with code review." Claude will search the community for you.
+- Think of it like checking the app store before building your own app. Nine times out of ten, someone has already solved the problem you're facing.
+- This mindset — **discover first, customize if needed, build only as a last resort** — will save you enormous amounts of time. We'll practice this pattern in the next few modules.
+
 ### Keyboard Shortcuts
 
 - **Escape** — cancel Claude's current response if it's going in the wrong direction. You don't have to wait for it to finish.

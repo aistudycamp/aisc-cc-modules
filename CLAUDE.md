@@ -4,19 +4,22 @@
 
 ## What This Repo Is
 
-This is an interactive, hands-on course with 8 modules that teach you the core building blocks of Claude Code. Each module is accessed by typing a command (`module-1` through `module-8`). Every module teaches a concept and gives you something to do — you learn by doing here, not just reading.
+This is an interactive, hands-on course with 11 modules that teach you the core building blocks of Claude Code. Each module is accessed by typing a command (`module-1` through `module-11`). Every module teaches a concept and gives you something to do — you learn by doing here, not just reading.
 
 By the end, you will have:
 - A customized CLAUDE.md you wrote yourself
 - A skill you created from scratch
 - A plugin installed from the marketplace
+- A real MCP connection to an external service
+- A creative design artifact you built with Claude
+- A project architecture plan for your own work
 - A personalized automation plan with 20+ analyzed ideas
 
 ## How to Start
 
 When a student opens this repo for the first time, greet them warmly. Something like:
 
-> "Welcome to AI for Prod! I'm excited to guide you through this. We have 8 hands-on modules ahead, and by the end you'll have a real automation plan for your work. Ready? Type `module-1` to get started!"
+> "Welcome to AI for Prod! I'm excited to guide you through this. We have 11 hands-on modules ahead, and by the end you'll have a real automation plan for your work. Ready? Type `module-1` to get started!"
 
 If the progress checklist below shows completed modules, welcome them back and tell them where they left off. For example:
 
@@ -28,10 +31,13 @@ If the progress checklist below shows completed modules, welcome them back and t
 - [ ] Module 2: Best Practices
 - [ ] Module 3: Skills
 - [ ] Module 4: Plugins
-- [ ] Module 5: Hooks
-- [ ] Module 6: MCP Servers
-- [ ] Module 7: Memory
-- [ ] Module 8: Automation Planner — Capstone
+- [ ] Module 5: MCP Servers
+- [ ] Module 6: Memory
+- [ ] Module 7: Subagents
+- [ ] Module 8: Hooks
+- [ ] Module 9: Design Challenge
+- [ ] Module 10: Project Architecture
+- [ ] Module 11: Automation Planner — Capstone
 
 Update this checklist as the student completes each module. Check the box by changing `[ ]` to `[x]`.
 
@@ -53,7 +59,10 @@ Update this checklist as the student completes each module. Check the box by cha
 | `module-2` | Best Practices | Plan mode, slash commands, session management | — |
 | `module-3` | Skills | How to give Claude reusable expertise | `concepts/what-are-skills.md` |
 | `module-4` | Plugins | How to extend Claude with community tools | `concepts/what-are-plugins.md` |
-| `module-5` | Hooks | How automatic behaviors work | `concepts/what-are-hooks.md` |
-| `module-6` | MCP Servers | How Claude connects to external services | `concepts/what-is-mcp.md` |
-| `module-7` | Memory | How Claude remembers across conversations | `concepts/what-is-memory.md` |
-| `module-8` | Automation Planner | Create your personalized automation roadmap | — |
+| `module-5` | MCP Servers | How Claude connects to external services | `concepts/what-is-mcp.md` |
+| `module-6` | Memory | How Claude remembers across conversations | `concepts/what-is-memory.md` |
+| `module-7` | Subagents | How to orchestrate multiple Claudes in parallel | `concepts/what-are-subagents.md` |
+| `module-8` | Hooks | How automatic behaviors work | `concepts/what-are-hooks.md` |
+| `module-9` | Design Challenge | Create a visual artifact with Claude | — |
+| `module-10` | Project Architecture | How to organize a Claude Code project | `concepts/what-is-project-architecture.md` |
+| `module-11` | Automation Planner | Create your personalized automation roadmap | — |

@@ -24,6 +24,7 @@ Explain plugins using the "app store" analogy:
 - Think about your phone. It comes with some basic built-in apps, but when you want to do something new -- edit photos, track workouts, learn a language -- you go to the app store and install something someone else built. Plugins work the same way for Claude Code.
 - A plugin is the **packaging layer** for Claude Code extensions. It can bundle together skills, hooks, MCP server connections, and configurations into a single installable unit. Instead of setting everything up yourself from scratch, you install a plugin and get a whole set of new capabilities instantly.
 - Why this matters: remember how in Module 3 you created one skill? That was great for learning! But imagine needing 10 or 20 skills for your workflow, plus hooks to automate things, plus MCP connections to your tools. Writing and configuring each one from scratch would take a long time. Plugins let you stand on other people's shoulders.
+- This is the pattern we introduced in Module 2: **discover first, customize if needed, build only as a last resort.** In Module 3, you searched for individual skills. Plugins take that one step further — instead of finding one skill at a time, you can install a whole toolkit that someone has curated and tested.
 - Plugins are installed into your project's `.claude/` folder, and once installed, all their features become immediately available. Plugin skills are namespaced (like `superpowers:brainstorm`) so multiple plugins can coexist without conflicting.
 
 Point the student to `concepts/what-are-plugins.md` if they want to read more after the lesson.
@@ -33,6 +34,10 @@ Point the student to `concepts/what-are-plugins.md` if they want to read more af
 ## Step 3: Show
 
 Walk the student through what's available in the plugin ecosystem:
+
+Before installing, walk the student through evaluating a plugin:
+
+> "When you find a plugin, ask yourself three questions: (1) Does it solve a problem I actually have? (2) Is it from a trusted source? (3) What skills and features does it include? Let's evaluate the superpowers plugin with these questions."
 
 1. **Explain what kinds of plugins exist.** Give concrete, exciting examples:
    - **superpowers** -- adds advanced planning, brainstorming, debugging, and code review workflows. It gives you slash commands like `/brainstorm`, `/plan`, and `/code-review`.

@@ -6,6 +6,8 @@ Key terms you'll encounter in the AI Study Camp, in plain language.
 
 **CLAUDE.md** -- A configuration file that gives Claude instructions, context, and rules for your project. Think of it as a briefing document Claude reads before every conversation.
 
+**CLAUDE.local.md** -- A personal override file for CLAUDE.md that only applies to you. It lives in the project root but is gitignored, so your personal preferences aren't shared with teammates.
+
 **CLI (Command Line Interface)** -- A text-based way to interact with your computer by typing commands instead of clicking buttons. Claude Code runs in the CLI.
 
 **Clone** -- Making a copy of a project (repository) from the internet onto your own computer so you can work with it locally.
@@ -18,7 +20,11 @@ Key terms you'll encounter in the AI Study Camp, in plain language.
 
 **Memory** -- Information Claude saves between sessions so it can remember your preferences, past decisions, and project context without you repeating yourself.
 
+**Plan Mode** -- A mode in Claude Code where Claude explores and plans without making changes. You enter it by typing `/plan` or pressing Shift+Tab. Great for thinking through an approach before writing code.
+
 **Plugin** -- A pre-built package of skills and configurations you can install to give Claude new capabilities, similar to installing an app on your phone.
+
+**Project Architecture** -- How you organize your Claude Code configuration files — CLAUDE.md, skills, hooks, settings — within a project folder so everything works together and is easy to maintain.
 
 **Prompt** -- The text you type to tell Claude what you want it to do. A good prompt is clear, specific, and includes relevant context.
 
