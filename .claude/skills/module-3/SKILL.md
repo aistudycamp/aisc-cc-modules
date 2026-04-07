@@ -29,7 +29,7 @@ Explain skills using the "recipe cards and reference guides" analogy:
 - Each skill file has two parts:
   - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a name and description. The `name` field becomes the command you type to run it.
   - **Markdown body** below -- this is where the actual instructions live. You write them in plain English.
-- You run an action skill by typing its name. For example, a skill named `write-blog-post` would be invoked by typing `write-blog-post`. Reference skills load automatically when Claude thinks they're relevant -- you don't need to invoke them.
+- You run an action skill by typing `/` followed by its name. For example, a skill named `write-blog-post` would be invoked by typing `/write-blog-post`. Reference skills load automatically when Claude thinks they're relevant -- you don't need to invoke them.
 
 Point the student to `concepts/what-are-skills.md` if they want to read more after the lesson.
 
@@ -46,7 +46,7 @@ Read the example skill file at `examples/example-skill.md` using your Read tool.
    description: Run a quick daily standup — asks three questions and formats a summary.
    ---
    ```
-   Explain: "See the `name: daily-standup`? That means you'd invoke this skill by typing `daily-standup`. The description shows up in the skill list so you know what it does at a glance."
+   Explain: "See the `name: daily-standup`? That means you'd invoke this skill by typing `/daily-standup`. The description shows up in the skill list so you know what it does at a glance."
 
 2. **The markdown body:** Walk through the steps and tone section. "These are the instructions Claude follows -- ask three specific questions, then format a summary. The tone section reminds Claude to keep it casual. You can put whatever instructions you want here."
 
@@ -88,7 +88,7 @@ Then do these three things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 3: Skills` to `- [x] Module 3: Skills`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
-   - `git add -A`
+   - `git add CLAUDE.md .claude/skills/`
    - `git commit -m "Complete Module 3 — created my first custom skill"`
 
    Tell the student: "Progress saved!"

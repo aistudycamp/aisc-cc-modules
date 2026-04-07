@@ -38,7 +38,7 @@ The part between the `---` lines is the label on the recipe card (its name and w
 ## How does it work?
 
 - Skills are stored as text files inside a `.claude/skills/` folder in your project — each skill gets its own folder with a file called `SKILL.md`
-- **Action skills** are invoked by typing their name (like `write-blog-post`). Claude reads the instructions and follows them.
+- **Action skills** are invoked by typing `/` followed by their name (like `/write-blog-post`). Claude reads the instructions and follows them.
 - **Reference skills** load automatically when Claude decides they're relevant to what you're working on -- you don't need to invoke them.
 - You can set a skill to only load when you invoke it manually, keeping Claude's attention focused.
 

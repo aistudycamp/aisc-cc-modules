@@ -105,7 +105,7 @@ Then do these three things:
    > "Let's save your progress! We're going to use something called git -- it's a tool that keeps track of every change you make, like a save point in a video game. Run these commands:"
 
    Run the following commands for them (use the Bash tool):
-   - `git add -A`
+   - `git add CLAUDE.md`
    - `git commit -m "Complete Module 1 — added my About the Student section to CLAUDE.md"`
 
    After the commit, explain: "Your work is now saved! If anything ever goes wrong, you can always come back to this point. We'll do this after every module -- it's a good habit."

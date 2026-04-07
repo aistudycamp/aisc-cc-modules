@@ -99,7 +99,7 @@ Then do these three things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 5: Hooks` to `- [x] Module 5: Hooks`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
-   - `git add -A`
+   - `git add CLAUDE.md`
    - `git commit -m "Complete Module 5 — learned how hooks automate behaviors"`
 
    Tell the student: "Progress saved!"

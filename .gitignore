@@ -1,3 +1,24 @@
+# Secrets and credentials
+.env
+.env.local
+.env*.local
+*.key
+*.pem
+credentials.json
+.credentials
+secrets.*
+.aws/
+
+# OS files
 .DS_Store
 *.swp
 *~
+
+# Dependencies and build artifacts
+node_modules/
+.venv/
+__pycache__/
+
+# Local Claude Code settings
+.claude/settings.local.json
+CLAUDE.local.md

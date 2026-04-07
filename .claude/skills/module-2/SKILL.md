@@ -36,7 +36,7 @@ Explain the key best practices one by one, in plain language:
     - `/help` — see what commands are available
     - `/clear` — start a fresh conversation while staying in the same project. Your CLAUDE.md and memories still apply, but the conversation history resets. Great when things get cluttered or you want to switch topics.
     - `/compact` — condenses the current conversation to save context space. Use this when conversations get long and Claude starts losing track of earlier details.
-  - **Skills** are invoked by typing their name (no slash needed). For example, `module-1` runs the Module 1 skill. You'll learn how to create your own skills in Module 3!
+  - **Skills** are invoked by typing `/` followed by the skill name — like `/write-blog-post` or `/deploy`. (The module commands like `module-1` are a special shortcut that also works without the slash.) You'll learn how to create your own skills in Module 3!
 
 ### Resuming a Session
 
@@ -106,7 +106,7 @@ Then do these three things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 2: Best Practices` to `- [x] Module 2: Best Practices`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
-   - `git add -A`
+   - `git add CLAUDE.md`
    - `git commit -m "Complete Module 2 — learned Claude Code best practices"`
 
    Tell the student: "Progress saved! See? Same two commands every time. Easy."

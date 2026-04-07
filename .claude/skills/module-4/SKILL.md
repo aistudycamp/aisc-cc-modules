@@ -84,7 +84,7 @@ Then do these three things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 4: Plugins` to `- [x] Module 4: Plugins`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
-   - `git add -A`
+   - `git add CLAUDE.md .claude/`
    - `git commit -m "Complete Module 4 — explored and installed plugins"`
 
    Tell the student: "Progress saved!"

@@ -105,7 +105,7 @@ Then do these three things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 7: Memory` to `- [x] Module 7: Memory`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
-   - `git add -A`
+   - `git add CLAUDE.md`
    - `git commit -m "Complete Module 7 — learned how Claude remembers across sessions"`
 
    Tell the student: "Progress saved!"
