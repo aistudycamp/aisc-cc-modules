@@ -2,7 +2,7 @@
 
 ## What is it?
 
-So far, everything you've learned has been about what happens *inside* Claude — shaping its behavior, giving it skills, automating with hooks. But what if Claude could reach *out* and interact with your actual tools — your email, your calendar, your browser?
+So far, everything you've learned has been about what happens *inside* Claude — shaping its behavior, giving it skills, extending it with plugins. But what if Claude could reach *out* and interact with your actual tools — your email, your calendar, your browser?
 
 That's what MCP makes possible. Think of it as **universal remote adapters**. You know how different TVs, sound bars, and streaming boxes each come with their own remote? MCP is like a universal system that lets one remote (Claude) control all of them. Each adapter connects Claude to a different tool or service.
 

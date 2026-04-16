@@ -1,6 +1,6 @@
 # Glossary
 
-Key terms you'll encounter in the AI Study Camp, in plain language.
+Key terms you'll encounter.
 
 ---
 
@@ -14,8 +14,6 @@ Key terms you'll encounter in the AI Study Camp, in plain language.
 
 **Context window** -- The total amount of text Claude can "see" in a single conversation, including your messages, Claude's replies, and any files it reads. When the window fills up, older content gets summarized to make room — key decisions and code are preserved.
 
-**Hook** -- An automatic action that runs when a specific event happens, like formatting code every time a file is saved. Configured in your project settings.
-
 **MCP (Model Context Protocol)** -- A standard that lets Claude connect to external tools and services (like email, calendars, or browsers) through small adapter programs called servers.
 
 **Memory** -- Information Claude saves between sessions so it can remember your preferences, past decisions, and project context without you repeating yourself.
@@ -24,7 +22,7 @@ Key terms you'll encounter in the AI Study Camp, in plain language.
 
 **Plugin** -- A pre-built package of skills and configurations you can install to give Claude new capabilities, similar to installing an app on your phone.
 
-**Project Architecture** -- How you organize your Claude Code configuration files — CLAUDE.md, skills, hooks, settings — within a project folder so everything works together and is easy to maintain.
+**Project Architecture** -- How you organize your Claude Code configuration files — CLAUDE.md, skills, settings — within a project folder so everything works together and is easy to maintain.
 
 **Prompt** -- The text you type to tell Claude what you want it to do. A good prompt is clear, specific, and includes relevant context.
 

@@ -22,8 +22,8 @@ Welcome the student to Module 4 with enthusiasm:
 Explain plugins using the "app store" analogy:
 
 - Think about your phone. It comes with some basic built-in apps, but when you want to do something new -- edit photos, track workouts, learn a language -- you go to the app store and install something someone else built. Plugins work the same way for Claude Code.
-- A plugin is the **packaging layer** for Claude Code extensions. It can bundle together skills, hooks, MCP server connections, and configurations into a single installable unit. Instead of setting everything up yourself from scratch, you install a plugin and get a whole set of new capabilities instantly.
-- Why this matters: remember how in Module 3 you created one skill? That was great for learning! But imagine needing 10 or 20 skills for your workflow, plus hooks to automate things, plus MCP connections to your tools. Writing and configuring each one from scratch would take a long time. Plugins let you stand on other people's shoulders.
+- A plugin is the **packaging layer** for Claude Code extensions. It can bundle together skills, MCP server connections, and configurations into a single installable unit. Instead of setting everything up yourself from scratch, you install a plugin and get a whole set of new capabilities instantly.
+- Why this matters: remember how in Module 3 you created one skill? That was great for learning! But imagine needing 10 or 20 skills for your workflow, plus MCP connections to your tools. Writing and configuring each one from scratch would take a long time. Plugins let you stand on other people's shoulders.
 - This is the pattern we introduced in Module 2: **discover first, customize if needed, build only as a last resort.** In Module 3, you searched for individual skills. Plugins take that one step further — instead of finding one skill at a time, you can install a whole toolkit that someone has curated and tested.
 - Plugins are installed into your project's `.claude/` folder, and once installed, all their features become immediately available. Plugin skills are namespaced (like `superpowers:brainstorm`) so multiple plugins can coexist without conflicting.
 
@@ -95,4 +95,4 @@ Then do these three things:
    Tell the student: "Progress saved!"
 
 3. **Direct them to the next module:**
-   > "Module 5 is about Hooks -- automatic behaviors that fire when certain events happen. It's one of Claude Code's most powerful features, and you're going to understand exactly how it works. Type `module-5` when you're ready!"
+   > "Module 5 is about MCP Servers -- how Claude connects to external tools and data sources like Gmail, Google Calendar, and databases. It's where Claude stops being just a conversation and starts actually doing work with your tools. Type `module-5` when you're ready!"

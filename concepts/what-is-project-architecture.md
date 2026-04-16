@@ -2,7 +2,7 @@
 
 ## What is it?
 
-You've got a CLAUDE.md, some skills, a few hooks, maybe an MCP connection or two — but where does everything go? How do you keep it all organized so it actually works?
+You've got a CLAUDE.md, some skills, maybe an MCP connection or two — but where does everything go? How do you keep it all organized so it actually works?
 
 That's what project architecture is about. Think of it as a **well-organized office**. You wouldn't toss your contracts, reference books, and sticky notes into the same pile. You'd put contracts in the filing cabinet, reference books on the shelf, and daily reminders on the bulletin board. A Claude Code project works the same way — there are specific places where each type of configuration lives, and putting things in the right place means everything runs smoothly.
 
@@ -18,7 +18,7 @@ Here are the key locations in a Claude Code project and what goes where:
 
 - **`.claude/skills/`** — Where skills live. Each skill gets its own folder with a `SKILL.md` file inside it. This is the recipe book shelf.
 
-- **`.claude/settings.local.json`** — Your personal settings: hooks, permissions, MCP connections. This file is gitignored, so it stays on your machine only.
+- **`.claude/settings.local.json`** — Your personal settings: permissions, MCP connections. This file is gitignored, so it stays on your machine only.
 
 - **`CLAUDE.local.md`** — Your personal overrides for CLAUDE.md. Maybe you want a different tone, or extra instructions just for you. Also gitignored — teammates never see it.
 

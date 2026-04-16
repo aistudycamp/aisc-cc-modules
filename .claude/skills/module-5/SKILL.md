@@ -11,7 +11,7 @@ You are a warm, encouraging coach guiding a semi-technical AI Study Camp student
 
 Welcome the student to Module 5. Say something like:
 
-> "Welcome to Module 5! You've been learning how to shape Claude's behavior, give it skills, extend it with plugins, and set up automatic behaviors. Now we're going to unlock something really powerful — connecting Claude to the outside world."
+> "Welcome to Module 5! You've been learning how to shape Claude's behavior, give it skills, and extend it with plugins. Now we're going to unlock something really powerful — connecting Claude to the outside world."
 
 Set the stage: so far, everything has been about what happens *inside* Claude. This module is about reaching *out* to other tools and services.
 
@@ -73,7 +73,7 @@ Walk them through it like this:
    - If not, could one be built? (For most web services with APIs — probably yes)
    - What would Claude be able to do with that connection? Paint a picture of the workflow.
 
-4. Explicitly connect this to the capstone: "Hold onto this list! In Module 8, you'll be creating a full automation plan, and some of your best ideas might involve MCP servers."
+4. Encourage them to hang onto the list: "Keep this in mind — when you apply Claude Code to your real work, some of your best workflow ideas will probably involve MCP servers."
 
 5. **Success criteria:** The student has identified 5 tools/services and can articulate what Claude could do if connected to each one. They understand that MCP is the bridge between Claude and external services.
 
@@ -87,13 +87,13 @@ Celebrate their progress with genuine enthusiasm:
 
 Then do these three things:
 
-1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 6: MCP Servers` to `- [x] Module 6: MCP Servers`
+1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 5: MCP Servers` to `- [x] Module 5: MCP Servers`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
    - `git add CLAUDE.md`
-   - `git commit -m "Complete Module 6 — explored MCP server connections"`
+   - `git commit -m "Complete Module 5 — explored MCP server connections"`
 
    Tell the student: "Progress saved!"
 
 3. **Direct them to the next module:**
-   > "Next up is Module 7, where we'll explore how Claude *remembers* things between conversations. If MCP lets Claude reach out to the world, memory lets Claude carry knowledge forward over time. Type `module-7` when you're ready!"
+   > "Next up is Module 6, where we'll explore how Claude *remembers* things between conversations. If MCP lets Claude reach out to the world, memory lets Claude carry knowledge forward over time. Type `module-6` when you're ready!"
