@@ -25,7 +25,9 @@ Explain skills using the "recipe cards and reference guides" analogy:
 - A skill is a markdown file that gives Claude reusable knowledge or workflows. There are two kinds:
   - **Action skills** -- workflows you trigger, like a deployment checklist or a meeting prep routine. Think of these as the recipe cards.
   - **Reference skills** -- knowledge Claude draws on when relevant, like an API style guide or your team's coding conventions. Think of these as a reference book on the shelf -- Claude grabs it when it's useful.
-- Skills live as markdown files inside the `.claude/skills/` folder in your project (each in its own subdirectory with a `SKILL.md` file).
+- Skills live as markdown files (each in its own subdirectory with a `SKILL.md` file), and they can live in one of two places:
+  - **Project skills** -- these live in `.claude/skills/` inside the repo itself. They get committed to git and travel with the project, so they only exist when Claude is opened inside that repo. Think of these like tools you leave on the jobsite -- the whole crew can grab them. That's how teammates share skills: just commit them to git and anyone who clones the repo gets them automatically.
+  - **Global (user-level) skills** -- these live in `~/.claude/skills/` in your home directory. They're available across ALL your projects, no matter which repo you open. Think of these like your personal toolbelt that goes with you everywhere. Great for personal workflows you want available all the time.
 - Each skill file has two parts:
   - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a name and description. The `name` field becomes the command you type to run it.
   - **Markdown body** below -- this is where the actual instructions live. You write them in plain English.
@@ -73,7 +75,11 @@ Now the student creates their own skill. Guide them step by step:
    - Ask them what tone or style the skill should use
    - Then use the Write tool to create a new `.md` file in `.claude/skills/` with the proper YAML frontmatter and instructions based on their answers
 
-3. **Test it!** Once the file is created, tell the student: "Your skill is live! Try it out by typing `/<their-skill-name>` in a new message." Encourage them to invoke it right now so they see it work.
+3. **Test it (and prove it persists)!** This is a two-part "aha" moment -- lean into the fun of it:
+
+   a. **Try it in this session first.** Tell the student: "Your skill is live! Try it out by typing `/<their-skill-name>` in a new message right now." Encourage them to invoke it immediately so they see it actually work.
+
+   b. **Now prove it sticks around.** Once they've seen it run, say something like: "Here's the really cool part -- the skill you just built is a real, persistent artifact. Want to prove it? Open a brand new Terminal tab (or window), `cd` back into this same project folder, run `claude`, and type `/<their-skill-name>` there. It'll work. Because it's a project skill living in `.claude/skills/`, any new Claude session opened in this repo gets access to it. You didn't just make something for right now -- you made something that's yours to keep."
 
 4. **Success criteria:** The student has created a working skill file in `.claude/skills/` with proper YAML frontmatter and has successfully invoked it using the slash command. Confirm this with them.
 

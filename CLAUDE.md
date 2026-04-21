@@ -4,7 +4,7 @@
 
 ## What This Repo Is
 
-This is an interactive, hands-on course with 8 modules that teach you the core building blocks of Claude Code. Each module is accessed by typing a command (`module-1` through `module-8`). Every module teaches a concept and gives you something to do — you learn by doing here, not just reading.
+This is an interactive, hands-on course with 7 modules that teach you the core building blocks of Claude Code. Each module is accessed by typing a command (`module-1` through `module-7`). Every module teaches a concept and gives you something to do — you learn by doing here, not just reading.
 
 By the end, you will have:
 - A customized CLAUDE.md you wrote yourself
@@ -18,7 +18,7 @@ By the end, you will have:
 
 When a student opens this repo for the first time, greet them warmly. Something like:
 
-> "Welcome to AI Study Camp's Claude Code Modules! I'm excited to guide you through this. We have 8 hands-on modules ahead, and by the end you'll have built real skills, connections, and artifacts you can use in your work.
+> "Welcome to AI Study Camp's Claude Code Modules! I'm excited to guide you through this. We have 7 hands-on modules ahead, and by the end you'll have built real skills, connections, and artifacts you can use in your work.
 >
 > A few quick things before we start:
 > - **I save your work automatically.** At the end of each module (not midway through), I'll commit your progress with git so nothing is lost. Natural stopping points are between modules.
@@ -33,14 +33,13 @@ If the progress checklist below shows completed modules, welcome them back and t
 
 ## Student Progress
 
-- [ ] Module 1: What is CLAUDE.md?
-- [ ] Module 2: Best Practices
+- [ ] Module 1: Intro Tips & Tricks for Using Claude Code
+- [ ] Module 2: What is CLAUDE.md?
 - [ ] Module 3: Skills
 - [ ] Module 4: Plugins
 - [ ] Module 5: MCP Servers
 - [ ] Module 6: Parallel Agents & Custom Sub-Agents
-- [ ] Module 7: Memory
-- [ ] Module 8: Project Architecture
+- [ ] Module 7: Project Architecture
 
 Update this checklist as the student completes each module. Check the box by changing `[ ]` to `[x]`.
 
@@ -58,11 +57,10 @@ Update this checklist as the student completes each module. Check the box by cha
 
 | Command | Topic | What They'll Learn | Concept Doc |
 |---------|-------|--------------------|-------------|
-| `module-1` | CLAUDE.md | How CLAUDE.md shapes Claude's behavior | `concepts/what-is-claude-md.md` |
-| `module-2` | Best Practices | Plan mode, slash commands, session management | — |
+| `module-1` | Intro Tips & Tricks for Using Claude Code | Plan mode, slash commands, session management | — |
+| `module-2` | CLAUDE.md | How CLAUDE.md shapes Claude's behavior | `concepts/what-is-claude-md.md` |
 | `module-3` | Skills | How to give Claude reusable expertise | `concepts/what-are-skills.md` |
 | `module-4` | Plugins | How to extend Claude with community tools | `concepts/what-are-plugins.md` |
 | `module-5` | MCP Servers | How Claude connects to external services | `concepts/what-is-mcp.md` |
 | `module-6` | Parallel Agents & Custom Sub-Agents | Parallel agents and reusable custom sub-agents | `concepts/what-are-subagents.md` |
-| `module-7` | Memory | How Claude remembers across conversations | `concepts/what-is-memory.md` |
-| `module-8` | Project Architecture | How to organize a Claude Code project | `concepts/what-is-project-architecture.md` |
+| `module-7` | Project Architecture | How to organize a Claude Code project | `concepts/what-is-project-architecture.md` |

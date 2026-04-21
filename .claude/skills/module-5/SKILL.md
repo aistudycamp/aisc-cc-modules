@@ -86,40 +86,74 @@ After the examples, reinforce the pattern: every one of these follows the same m
 
 ## Step 4 — Exercise
 
-Guide the student through this brainstorming exercise. Be encouraging and interactive throughout.
+This exercise has two parts. First we brainstorm a wishlist. Then we actually connect ONE MCP server, live, together. Be encouraging and interactive throughout.
 
-**The task:** Have the student brainstorm 5 tools or services they use daily that they wish Claude could connect to.
+### Part 1 — Brainstorm 5 tools (quick!)
 
-Walk them through it like this:
+**The task:** Have the student list 5 tools or services they wish Claude were connected to. Keep this snappy — the goal is a written list, not a long discussion.
 
-1. Ask: "Think about your typical workday — or even your personal life. What tools and services do you use regularly? Email, calendars, project management tools, social media, spreadsheets, note-taking apps, messaging platforms..."
+Walk them through it:
 
-2. Then ask: "If you could wave a magic wand and have Claude connected to any 5 of those, which would save you the most time or energy?"
+1. Ask: "Think about your typical workday. What tools do you live in? Email, calendar, Slack, a project tracker, Google Drive, a database, your browser... if you could wave a magic wand, which 5 would you want Claude connected to?"
 
-3. As they share each one, discuss it together:
-   - Does an MCP server likely already exist for this? (For major tools like Gmail, Slack, Google Calendar — yes!)
-   - If not, could one be built? (For most web services with APIs — probably yes)
-   - What would Claude be able to do with that connection? Paint a picture of the workflow.
+2. For each one they name, ask them for a one-line note: *what would Claude be able to do once connected?* (e.g. "Gmail — draft replies and pull out action items from my inbox.")
 
-4. Encourage them to hang onto the list: "Keep this in mind — when you apply Claude Code to your real work, some of your best workflow ideas will probably involve MCP servers."
+3. If they get stuck, prompt with categories: communication, productivity, creative, data, social, business software.
 
-5. **Success criteria:** The student has identified 5 tools/services and can articulate what Claude could do if connected to each one. They understand that MCP is the bridge between Claude and external services.
+4. **Save the list.** Create the file `student-output/my-mcp-wishlist.md` and write their 5 tools in it, each with their one-line note. This is their artifact — they can come back to it later.
 
-If the student gets stuck, prompt with categories: communication tools, productivity tools, creative tools, data tools, social platforms, business software.
+### Part 2 — Actually connect ONE MCP server (live!)
+
+Now the fun part. We're going to pick ONE of their 5 and actually wire it up right now.
+
+1. **Pick one together.** Say something like: "Out of your 5, which would be easiest to set up today? Let's do just one — you can connect the others on your own time later."
+
+   Suggest easy starter options that don't require heavy setup:
+   - **Gmail, Google Calendar, Google Drive, Slack, Airtable** — if the student uses claude.ai Pro, these are available as one-click OAuth connectors. Super easy.
+   - **GitHub MCP** — straightforward if they already have a GitHub token.
+   - **Playwright browser MCP** — great pick if they just want to see an MCP in action without connecting any personal accounts. Claude can open web pages and click around.
+
+2. **Walk them through the connection.** Depending on what they chose:
+
+   - **In Claude Code:** Run `/mcp` in the Claude Code interface to see the MCP management UI. You can add, inspect, and authenticate servers from there.
+   - **Via config file:** MCPs can also be added by editing `.mcp.json` at the project level (shared, checked in) or `~/.claude.json` at the user level (private to them).
+   - **Via `claude mcp add`:** Some servers can be added with a single CLI command — for example, the Playwright browser MCP.
+   - **Via claude.ai connectors:** If they use claude.ai Pro, they can also toggle on Gmail, Calendar, Drive, Slack, Airtable, and more with a single OAuth click in settings.
+
+   Pick the simplest path for the one they chose. For the easiest live demo, the Playwright browser MCP is hard to beat — no personal accounts to hook up, just `claude mcp add` and you're off.
+
+3. **Authenticate and test.** Once the server is connected, have Claude actually use it. One small real thing:
+   - Gmail: *"Search my inbox for emails from [a person]."*
+   - Calendar: *"What's on my schedule tomorrow?"*
+   - Drive: *"Find my most recent doc about [topic]."*
+   - Slack: *"What were the last few messages in #general?"*
+   - Playwright: *"Open google.com and take a screenshot."*
+
+   When it works, they'll see Claude actually reach out to the real service and bring data back. That's the magic moment.
+
+4. **Celebrate the connection.** This is a big deal — they just extended Claude to reach into their real world.
+
+5. **Homework.** Tell them: *"The other 4 tools on your list? Those are your homework. Connect them on your own time when you're back in your real workflow. You now know the pattern — `/mcp`, config file, or `claude mcp add`. Rinse and repeat."*
+
+### Success criteria
+
+The student has:
+- (a) A saved wishlist of 5 tools at `student-output/my-mcp-wishlist.md`, each with a one-line note on what Claude could do.
+- (b) ONE live, working MCP connection in their Claude Code setup that they tested with a real command.
 
 ## Step 5 — Celebrate and Advance
 
 Celebrate their progress with genuine enthusiasm:
 
-> "You now understand how Claude reaches out to the world! MCP is what transforms Claude from a smart conversation partner into a true productivity tool that works with your actual tools and data. That's a huge concept to grasp, and you nailed it."
+> "You did it — you have a real, working MCP connection! Claude is no longer just a smart conversation partner; it's now wired into a tool you actually use. That's the moment MCP stops being a concept and starts being a superpower. Plus, you've got a wishlist of 4 more connections waiting for you whenever you're ready."
 
 Then do these three things:
 
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 5: MCP Servers` to `- [x] Module 5: MCP Servers`
 
-2. **Save their work with git.** Run the following commands (use the Bash tool):
-   - `git add CLAUDE.md`
-   - `git commit -m "Complete Module 5 — explored MCP server connections"`
+2. **Save their work with git.** Run the following commands (use the Bash tool). Note: the wishlist lives in the repo, but MCP config at `~/.claude.json` is outside the repo and can't be staged. If the student added a project-level `.mcp.json`, stage that too.
+   - `git add CLAUDE.md student-output/` (add `.mcp.json` as well if they created one in the project)
+   - `git commit -m "Complete Module 5 — connected first MCP server and saved wishlist"`
 
    Tell the student: "Progress saved!"
 
