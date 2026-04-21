@@ -44,6 +44,8 @@ Then hit them with the concrete time math:
 - **Quick tasks** — simple requests taking seconds
 - **Context-dependent work** — work that builds on a previous conversation
 
+**A small note for the curious:** When Claude spins up these ad-hoc workers, it's using a built-in `general-purpose` sub-agent. In Part B we'll create *custom* sub-agents — same underlying mechanism, but with a defined persona, expertise, and name you can call on over and over.
+
 **Help the student see how agents fit alongside what they already know:**
 
 | Feature | What it is | When to use it |
@@ -60,19 +62,23 @@ Now draw the key distinction:
 
 Frame it as **hiring a permanent team**:
 
-- A **custom sub-agent** is a permanent AI team member — an Engineer, an Executive, a User Researcher — with a persona, expertise, and visual identity (emoji + color) that you can summon any time.
+- A **custom sub-agent** is a permanent AI team member — an Engineer, an Executive, a User Researcher — with a persona, expertise, and a color badge that you can summon any time.
 - They live as markdown files inside a `.claude/agents/` folder in your project. Once you've created one, it's always available — you just call it by name.
-- Instead of telling Claude "act like an engineer" every time, you build a real 👨‍💻 Engineer sub-agent once and call on it forever.
+- Instead of telling Claude "act like an engineer" every time, you build a real Engineer sub-agent once and call on it forever.
 
 **Anatomy of a sub-agent file:**
 
+A sub-agent is a markdown file with two parts: **YAML frontmatter** at the top (between the `---` lines) for metadata, and the **body of the file** which is the system prompt — the instructions that define who this specialist is and how they work.
+
 ```markdown
-# 👨‍💻 Engineer
+---
+name: engineer
+description: Use for technical reviews of specs, architecture decisions, and implementation feedback. Flags risks, edge cases, and scalability concerns.
+tools: Read, Grep, Glob, Bash
+model: sonnet
+color: purple
+---
 
-## Color
-purple
-
-## Persona
 You are an experienced software engineer with 10+ years at top tech
 companies. You think deeply about architecture, scalability, and
 implementation details. You're direct and pragmatic — you flag risks
@@ -83,9 +89,22 @@ early and suggest alternatives when something won't work.
 - Performance optimization and scalability
 - Spotting edge cases and error states
 - Implementation complexity estimation
+
+## How you respond
+- Lead with the top 1–3 risks, then supporting detail
+- Be concrete — name files, functions, tradeoffs
+- Suggest alternatives, don't just flag problems
 ```
 
-Four pieces: **emoji + name**, **color**, **persona**, **expertise**. That's it.
+Let's break down the frontmatter fields:
+
+- **`name`** — short identifier (lowercase, hyphens). This is how you'll call the agent: `@engineer`.
+- **`description`** — **the most important field.** This is what Claude uses to decide when to auto-invoke this agent. Write it so it clearly names the trigger situation ("Use for technical reviews of specs…"). A vague description means Claude never picks the agent.
+- **`tools`** — comma-separated list of tools the agent can use. Scoping tools is powerful: a reviewer with `Read, Grep, Glob` literally cannot edit files. Start restrictive and expand as needed.
+- **`model`** — which model to run (`sonnet`, `haiku`, `opus`). Use `haiku` for cheap/fast work and reserve `opus` for deep reasoning.
+- **`color`** — a visual badge so you can tell at a glance which agent is responding. Valid options: `red`, `blue`, `green`, `yellow`, `purple`, `orange`, `pink`, `cyan`, or `automatic`.
+
+Everything **below the second `---`** is the system prompt — the persona, expertise, and style instructions. That's where you make the agent feel like a real colleague rather than a generic assistant.
 
 **Ad-hoc vs custom — when to use which:**
 
@@ -145,16 +164,34 @@ The pattern: the main Claude reads the request, decides to split it up, launches
 
 ### Show B — A custom sub-agent in action
 
-Walk through the 👨‍💻 Engineer sub-agent file from Step 2. Then show how you'd call it:
+Walk through the Engineer sub-agent file from Step 2. Then show the **three ways** to invoke it, from most implicit to most explicit:
+
+**1. Automatic delegation** — just describe the task, and Claude picks the right agent based on the `description` field:
 
 ```
-👨‍💻 Engineer, review @dashboard-prd.md and identify technical
+Review @dashboard-prd.md and flag any technical risks or
+implementation complexity I should know about before we ship it.
+```
+
+Because the Engineer's description says "Use for technical reviews of specs…", Claude routes this to the Engineer automatically.
+
+**2. Natural language invocation** — name the agent without forcing it:
+
+```
+Have the engineer review @dashboard-prd.md and identify technical
 challenges, performance implications, and implementation complexity.
 ```
 
-Point out what happens: Claude switches into Engineer mode — same underlying Claude, but now wearing the Engineer's persona and expertise. The response comes back with the Engineer's emoji and color so you can see it's coming from that specialist.
+**3. @-mention** — the guaranteed way to run a specific agent:
 
-Mention the helper: running `/agents` in Claude Code lists every custom sub-agent you have configured, so you never lose track of your team.
+```
+@engineer review @dashboard-prd.md and identify technical
+challenges, performance implications, and implementation complexity.
+```
+
+Point out what happens: Claude Code delegates to the Engineer sub-agent, which runs in its own isolated context with its own tools. The response comes back tagged with the Engineer's color (purple) so you can see at a glance that a specialist answered — not the main Claude.
+
+Mention the helper: running `/agents` in Claude Code opens an interactive panel showing every custom sub-agent you have configured, plus built-in ones. It's also the easiest way to *create* new agents — which is exactly what we'll do in the exercise.
 
 ---
 
@@ -194,30 +231,61 @@ Now shift to the permanent-team side of the module.
 
    Let the student pick one, or propose their own.
 
-5. **Write the sub-agent file together.** Use the Write tool to create a new file at `.claude/agents/<slug>.md` (lowercase, hyphens, `.md`). Fill in all four sections based on what the student wants this specialist to do:
+5. **Create it using `/agents`** — the recommended, guided workflow. Walk the student through these steps:
+
+   a. **Run `/agents`** in Claude Code.
+   b. **Select "Create new agent"** → choose **"Project"** (so it saves to `.claude/agents/` and lives with this codebase).
+   c. **Choose "Generate with Claude"** — this is the easiest path. You describe what you want, and Claude drafts the file for you.
+   d. **Describe the agent.** Help the student write a clear, specific description. A good format:
+      > "A [role] who [what they do]. Use when [trigger situation]. They focus on [key concerns] and respond with [style/format]."
+
+      For example: *"A data analyst who turns raw numbers into clear insights. Use when I have metrics, survey results, or performance data to interpret. They focus on what the numbers actually mean for decisions, flag caveats in the data, and respond with a headline finding followed by supporting evidence."*
+
+   e. **Pick a color** — something memorable. `cyan` for data people, `purple` for engineers, `pink` for creatives, etc.
+   f. **Review the generated file before saving.** This is the learning moment — point out:
+      - The YAML frontmatter at the top (`name`, `description`, `tools`, `model`, `color`)
+      - How the `description` field will drive auto-delegation later
+      - The body of the file is the system prompt — everything below the second `---`
+   g. **Save it.** The file lands at `.claude/agents/<slug>.md`.
+
+   If the student prefers to write it by hand, here's the template they can paste:
 
    ```markdown
-   # [Emoji] [Name]
+   ---
+   name: [slug-with-hyphens]
+   description: [One or two sentences naming when to use this agent]
+   tools: Read, Grep, Glob, Bash
+   model: sonnet
+   color: [red/blue/green/yellow/purple/orange/pink/cyan]
+   ---
 
-   ## Color
-   [purple / blue / green / red / yellow / cyan / magenta]
-
-   ## Persona
-   [2–3 paragraphs: background, communication style, what they focus on]
+   You are a [role] with [background]. You [communication style].
+   You focus on [priorities].
 
    ## Expertise
    - [Skill 1]
    - [Skill 2]
    - [Skill 3]
+
+   ## How you respond
+   - [Style guideline 1]
+   - [Style guideline 2]
    ```
 
-   Ask the student guiding questions as you build it: "What's their background? How do they communicate? What should they be great at?" Make the persona feel like a real colleague, not a generic assistant.
+6. **Invoke it once so the student sees it work.** Pick a realistic, low-stakes task for their new sub-agent — something they could actually use the output from. For example, if they built a Data Analyst, ask it to outline how they'd measure success for a project from their life.
 
-6. **Invoke it once so the student sees it work.** Pick a realistic, low-stakes task for their new sub-agent — something they could actually use the output from. For example, if they built a Data Analyst, ask it to outline how they'd measure success for a project from their life. Call the sub-agent by name (emoji + name), just like in Show B.
+   Use the `@-mention` form so the student sees the explicit invocation:
+
+   ```
+   @data-analyst help me think through how I'd measure success for
+   [project the student mentioned].
+   ```
+
+   Point out the colored badge on the response — that's how they'll always know the specialist answered, not the main Claude.
 
 7. **The reveal:**
 
-   > "You just hired a permanent team member. Any time you want this perspective — whether it's tomorrow or six months from now — just call their name. That's the difference between ad-hoc agents (workers for a task) and custom sub-agents (a specialist team)."
+   > "You just hired a permanent team member. Any time you want this perspective — whether it's tomorrow or six months from now — just mention them or @-call their name. Claude will even delegate to them automatically when your request matches their description. That's the difference between ad-hoc agents (workers for a task) and custom sub-agents (a specialist team)."
 
 **Success criteria:** the student has (a) seen 2 parallel agents deliver research on a topic they chose, and (b) created a working custom sub-agent file at `.claude/agents/<slug>.md` and successfully invoked it at least once.
 
@@ -231,7 +299,7 @@ Celebrate both wins:
 
 Then do these three things:
 
-1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 6: Subagents` to `- [x] Module 6: Subagents`
+1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 6: Parallel Agents & Custom Sub-Agents` to `- [x] Module 6: Parallel Agents & Custom Sub-Agents`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
    - `git add CLAUDE.md .claude/agents/`
