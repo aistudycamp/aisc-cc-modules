@@ -1,6 +1,6 @@
 # AI Study Camp's Claude Code Modules
 
-Welcome to the AI Study Camp hands-on learning experience! This repo will teach you the core building blocks of Claude Code through 9 interactive modules — each one teaches a concept and gives you something to do.
+Welcome to the AI Study Camp hands-on learning experience! This repo will teach you the core building blocks of Claude Code through 8 interactive modules — each one teaches a concept and gives you something to do.
 
 ## Prerequisites
 
@@ -43,14 +43,13 @@ If you need to stop mid-module, just close your terminal. When you come back, st
 | 1 | CLAUDE.md | 20–30 min | An "About Me" section added to your project's `CLAUDE.md` file |
 | 2 | Best Practices | 20–30 min | *(no artifact — a practice session on plan mode, slash commands, and session management)* |
 | 3 | Skills | 30–45 min | A new skill file at `.claude/skills/<your-skill>/SKILL.md` that you wrote from scratch |
-| 4 | Plugins | 30–45 min | A community plugin installed in your setup, plus hands-on experience running one of its skills |
+| 4 | Plugins | 30–45 min | Two community plugins installed and chained to produce three app-redesign mockups in `student-output/` |
 | 5 | MCP Servers | 30–45 min | A written list of 5 external tools you'd want Claude connected to, with notes on what each would enable |
-| 6 | Memory | 20–30 min | At least one personal memory saved, plus a live demo of Claude recalling it naturally in a later response |
-| 7 | Subagents | 30–45 min | A two-part research briefing produced by 2 subagents running in parallel on a topic you chose |
-| 8 | Design Challenge | 45–60 min | A visual artifact — slide deck, diagram, web page, image prompt, or interactive widget — saved to `student-output/` |
-| 9 | Project Architecture | 30–45 min | `student-output/my-project-architecture.md` — a complete project architecture plan for a real project of your own |
+| 6 | Parallel Agents & Custom Sub-Agents | 45–60 min | A two-part research briefing from 2 parallel agents, plus a reusable custom sub-agent file in `.claude/agents/` |
+| 7 | Memory | 20–30 min | At least one personal memory saved, plus a live demo of Claude recalling it naturally in a later response |
+| 8 | Project Architecture | 30–45 min | `student-output/my-project-architecture.md` — a complete project architecture plan for a real project of your own |
 
-**Total course time: ~4.5–6 hours.** You don't need to do it all at once — most students spread it across 2–3 sessions.
+**Total course time: ~4.5–5.5 hours.** You don't need to do it all at once — most students spread it across 2–3 sessions.
 
 ## What You'll Walk Away With
 
@@ -59,7 +58,7 @@ By the end, you will have:
 - A skill you created from scratch
 - A plugin installed from the marketplace
 - A real MCP connection to an external service
-- A creative design artifact you built with Claude
+- Hands-on experience orchestrating subagents in parallel
 - A project architecture plan for your own work
 
 ## Need Help?

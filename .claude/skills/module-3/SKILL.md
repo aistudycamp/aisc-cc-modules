@@ -31,7 +31,9 @@ Explain skills using the "recipe cards and reference guides" analogy:
   - **Markdown body** below -- this is where the actual instructions live. You write them in plain English.
 - You run an action skill by typing `/` followed by its name. For example, a skill named `write-blog-post` would be invoked by typing `/write-blog-post`. Reference skills load automatically when Claude thinks they're relevant -- you don't need to invoke them.
 
-Point the student to `concepts/what-are-skills.md` if they want to read more after the lesson.
+Tell the student:
+
+> "If you want to go deeper later, there's a concept doc at `concepts/what-are-skills.md`. The easiest way to read it is to just ask me: *'Show me the concept doc on skills'* — I'll pull it up and walk you through it."
 
 ---
 
@@ -50,21 +52,7 @@ Read the example skill file at `examples/example-skill.md` using your Read tool.
 
 2. **The markdown body:** Walk through the steps and tone section. "These are the instructions Claude follows -- ask three specific questions, then format a summary. The tone section reminds Claude to keep it casual. You can put whatever instructions you want here."
 
-4. **Before You Build: Check What Already Exists**
-
-   Before jumping into creating a skill from scratch, show the student how to discover existing ones:
-   
-   > "Remember what we said in Module 2 about searching before building? Let's practice that now. Before you create your own skill, let's see what the community has already built."
-   
-   Demonstrate skill discovery:
-   - Ask: "What kind of task would you love to automate?" (Use their role from the About Me section)
-   - Then search for relevant skills: "Let me search the community for skills related to [their answer]..."
-   - Show the results and discuss: "See? There are already skills for [related tasks]. Some might be exactly what you need. Others might be close — you could install one and customize it."
-   
-   Reinforce the pattern:
-   > "The smart workflow is: **Search first → Customize if close → Build from scratch only if nothing exists.** Now that you've seen what's out there, let's build YOUR custom skill — something tailored specifically to your workflow that doesn't exist yet."
-
-5. **Fun revelation:** "Here's a fun fact -- the module you're doing right now? It's ALSO a skill file! The file that's telling me how to teach you this lesson lives in `.claude/skills/`. Skills are teaching you about skills. How meta is that?"
+3. **Fun revelation:** "Here's a fun fact -- the module you're doing right now? It's ALSO a skill file! The file that's telling me how to teach you this lesson lives in `.claude/skills/`. Skills are teaching you about skills. How meta is that?"
 
 ---
 

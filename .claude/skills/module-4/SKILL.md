@@ -27,29 +27,25 @@ Explain plugins using the "app store" analogy:
 - This is the pattern we introduced in Module 2: **discover first, customize if needed, build only as a last resort.** In Module 3, you searched for individual skills. Plugins take that one step further — instead of finding one skill at a time, you can install a whole toolkit that someone has curated and tested.
 - Plugins are installed into your project's `.claude/` folder, and once installed, all their features become immediately available. Plugin skills are namespaced (like `superpowers:brainstorm`) so multiple plugins can coexist without conflicting.
 
-Point the student to `concepts/what-are-plugins.md` if they want to read more after the lesson.
+Tell the student:
+
+> "If you want to go deeper later, there's a concept doc at `concepts/what-are-plugins.md`. The easiest way to read it is to just ask me: *'Show me the concept doc on plugins'* — I'll pull it up and walk you through it."
 
 ---
 
 ## Step 3: Show
 
-Walk the student through what's available in the plugin ecosystem:
+Walk the student through what's out there and how installation works:
 
-Before installing, walk the student through evaluating a plugin:
-
-> "When you find a plugin, ask yourself three questions: (1) Does it solve a problem I actually have? (2) Is it from a trusted source? (3) What skills and features does it include? Let's evaluate the superpowers plugin with these questions."
-
-1. **Explain what kinds of plugins exist.** Give concrete, exciting examples:
-   - **superpowers** -- adds advanced planning, brainstorming, debugging, and code review workflows. It gives you slash commands like `/brainstorm`, `/plan`, and `/code-review`.
+1. **Give concrete examples of plugins that exist.**
+   - **superpowers** -- adds advanced planning, brainstorming, debugging, and code-review workflows. You get slash commands like `/brainstorm`, `/plan`, and `/code-review` all from one install.
    - **frontend-design** -- helps you build polished, production-quality web interfaces with modern design patterns.
-   - **code-review** -- provides thorough code review capabilities for pull requests and code changes.
+   - **playwright** -- adds browser automation for testing websites, taking screenshots, and checking UI behavior.
    - And many more being created by the community all the time.
 
-2. **Explain how plugins bundle skills together.** "Remember the single skill you built in Module 3? A plugin like superpowers bundles together many skills in one install. That means one installation gives you access to brainstorming, planning, debugging, code review, and more -- all at once."
-
-3. **Show how installation works.** Explain that installing a plugin is done through the Claude Code CLI:
-   - You can browse and install plugins using the command: `/install-plugin` or by running `claude plugin add <plugin-name>` in your terminal
-   - Once installed, the plugin's skills show up as new slash commands you can use immediately
+2. **Show how installation works.** Installing a plugin is done through the Claude Code CLI:
+   - Browse and install with `/install-plugin`, or run `claude plugin add <plugin-name>` in your terminal.
+   - Once installed, the plugin's skills show up as new slash commands you can use immediately.
 
 ---
 
@@ -59,22 +55,31 @@ Now the student gets hands-on with plugins:
 
 1. **Discover what's available.** Tell the student: "Let's explore what plugins you could add to your setup." Show them how to look at available plugins. Point out that they may already have some plugins installed -- check the list of available skills in the current session.
 
-2. **Install the superpowers plugin.** Guide the student through installing it:
-   - Explain: "The superpowers plugin is a great starting point. It adds a bunch of powerful workflows to your Claude Code setup."
-   - Help them run the installation. If the plugin is already available (check the skill list), let them know: "Great news -- it looks like superpowers is already installed in this environment! That means we can jump straight to trying it out."
-   - If it needs to be installed, walk them through the installation process step by step.
+2. **Install the plugins we'll use.** We're going to use TWO plugins together so the student can feel what "installing capabilities" really means:
+   - **superpowers** — gives us `/brainstorm`, a structured brainstorming workflow.
+   - **frontend-design** — generates real HTML mockups the student can view in a browser.
 
-3. **Try a plugin skill.** Once superpowers is available, have the student try one of its skills:
-   - Suggest they try `/brainstorm` with a fun, low-stakes topic. For example:
-     - "Brainstorm creative names for a pet goldfish"
-     - "Brainstorm unusual uses for a paperclip"
-     - "Brainstorm ideas for a weekend side project"
-   - Let them pick their own topic if they prefer!
-   - After they try it, discuss what happened: "See how that skill walked you through a structured brainstorming process? Someone built that workflow and packaged it as part of the superpowers plugin. You got all that without writing a single instruction yourself."
+   For each plugin, check the skill list first. If it's already available, say something like: "Great news — superpowers is already installed in this environment, so we can jump right in." If it needs to be installed, walk them through `/install-plugin` or `claude plugin add <plugin-name>` step by step.
 
-4. **Reflect on the power of plugins.** Ask: "Think about how long it took you to create one skill in Module 3. Now imagine someone spent hours perfecting a whole collection of skills and shared them for free. That's the power of plugins -- you benefit from other people's expertise."
+3. **Do a real exercise that uses both plugins.** The student is going to redesign a well-known app — by default, use **Instagram**, but let them pick any app they know well (TikTok, Spotify, Gmail, etc.) if they'd rather.
 
-5. **Success criteria:** The student understands what plugins are, has explored the available plugins (or installed one), and has successfully used at least one plugin skill. Confirm this with them.
+   **Part A — Brainstorm with superpowers.** Have them run `/brainstorm` with a prompt like:
+
+   > "Brainstorm 3 very different new visual design directions for Instagram's home feed. Each one should feel distinct — think 'minimalist', 'playful', 'editorial', 'retro', etc."
+
+   Let the brainstorm skill walk them through it. At the end, make sure you have 3 clearly distinct design directions written down.
+
+   **Part B — Render with frontend-design.** Now take those 3 directions and ask the frontend-design skill to build them as 3 separate HTML files (one per direction), saved to `student-output/module-4/`. Each file should be a single-page mockup of the chosen app's home screen styled in that direction.
+
+   **Part C — View in the browser.** Once the files are generated, open them so the student can actually see the designs. The simplest way:
+   - On macOS, run `open student-output/module-4/design-1.html` (and repeat for 2 and 3). This opens each mockup in the student's default browser.
+   - If they'd like them side-by-side, suggest opening all three in separate tabs.
+
+   After they've seen the mockups, do the reveal:
+
+   > "Look what just happened — *you* brainstormed the directions, and two community-built plugins did the heavy lifting. Superpowers structured your thinking. Frontend-design turned it into real, viewable HTML. You didn't write a single line of CSS, and you didn't build either of those workflows yourself. That's the power of plugins — you stood on other people's shoulders."
+
+4. **Success criteria:** The student understands what plugins are, has two plugins available in their setup (superpowers and frontend-design), and has viewed three app-redesign mockups in their browser that they produced by chaining `/brainstorm` into frontend-design. Confirm this with them.
 
 ---
 
@@ -82,15 +87,15 @@ Now the student gets hands-on with plugins:
 
 Celebrate their progress with genuine enthusiasm:
 
-> "You just supercharged your Claude Code setup! Think about the journey so far: in Module 1 you learned how CLAUDE.md sets the rules, in Module 2 you learned best practices, in Module 3 you built your own skill, and now in Module 4 you've tapped into a whole ecosystem of pre-built tools. You're really getting the hang of this!"
+> "You just supercharged your Claude Code setup! You went from building one skill yourself to tapping into a whole ecosystem someone else already built. That's a real unlock — you're really getting the hang of this."
 
 Then do these three things:
 
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 4: Plugins` to `- [x] Module 4: Plugins`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
-   - `git add CLAUDE.md .claude/`
-   - `git commit -m "Complete Module 4 — explored and installed plugins"`
+   - `git add CLAUDE.md .claude/ student-output/`
+   - `git commit -m "Complete Module 4 — installed plugins and built 3 app-redesign mockups"`
 
    Tell the student: "Progress saved!"
 

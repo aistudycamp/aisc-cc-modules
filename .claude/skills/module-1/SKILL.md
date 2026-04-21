@@ -22,33 +22,37 @@ Welcome the student to Module 1 with enthusiasm. Something like:
 Explain CLAUDE.md using the "briefing document" analogy:
 
 - Imagine you're hiring someone for a job. Before their first day, you hand them a one-page document that says: "Here's who we are, here's how we work, and here's what we expect." That's CLAUDE.md.
-- It's a plain-text file that lives in the root of a project folder. Every time Claude starts a conversation in that project, it reads this file FIRST -- before you even say anything.
+- It's a plain-text file that lives at the **root of a project folder** — that just means the top-level folder of the project, the one you're sitting in right now (`aisc-cc-modules`). It's the same folder you'd see if you ran `ls` in your terminal. Every time Claude starts a conversation in that project, it reads this file FIRST -- before you even say anything.
 - It shapes Claude's personality, its knowledge about the project, and what rules it should follow.
 - Without it, Claude starts every conversation as a blank slate. With it, Claude already knows your preferences and context.
 
-Point the student to `concepts/what-is-claude-md.md` if they want to read more after the lesson.
+Tell the student:
+
+> "If you want to go deeper later, there's a concept doc at `concepts/what-is-claude-md.md`. The easiest way to read it is to just ask me: *'Show me the concept doc on CLAUDE.md'* — I'll pull it up and walk you through it. (You can also open it in any text editor if you'd rather read it yourself.)"
 
 ---
 
 ## Step 3: Show
 
-This is where it gets fun. First, **show the student the entire CLAUDE.md file** so they can see it with their own eyes. Print the full contents of the CLAUDE.md file directly into the conversation -- don't summarize it, don't skip sections. Let them read every line. Say something like:
+This is where it gets fun. First, **show the student the entire CLAUDE.md file** so they can read it right there in the chat. Read the file with the Read tool, then paste every line of it into the conversation inside a fenced code block — do NOT summarize, truncate, or skip sections. The student should be able to scroll through the full file inline (no need to open another window).
 
-> "Before I walk you through it, here's the entire file. Take a look:"
+Say something like:
 
-Then print the full file contents.
+> "Before I walk you through it, here's the entire CLAUDE.md file for this repo — every line of it. Take a look:"
+
+Then print the full file contents inside a ```` ```markdown ```` code block.
 
 After they've seen it, walk through it section by section WITH the student, making it personal and interactive:
 
-1. **The identity block** (the line about being a "warm, encouraging coach"): Say something like -- "See this line? It says I should be a warm, encouraging coach. That's why I've been talking to you this way the whole time! You've been experiencing CLAUDE.md in action without even knowing it."
+1. **The identity block** (the line about being a "warm, encouraging coach"): Say something like -- "See this line? It says I should be a warm, encouraging coach who explains key concepts so you get the most out of Claude Code. That's why I've been talking to you this way the whole time."
 
 2. **The progress checklist**: "This is how I keep track of where you are in the course. When you finish a module, I check the box. It's like a to-do list that persists across our conversations."
 
-3. **The teaching guardrails**: "These are my rules. I'm told to always explain jargon, use analogies, celebrate your progress, and never skip the hands-on exercise. I've been following these instructions this whole time!"
+3. **The teaching guardrails**: "These are my rules — always explain jargon, use analogies, celebrate progress, and never skip the hands-on exercise."
 
 4. **The module reference table**: "This is my map of the course. It tells me what each module covers and where to find the concept docs."
 
-Make it a genuine revelation moment: "You've been experiencing CLAUDE.md this entire time -- every warm greeting, every analogy, every celebration. All of it comes from this one file."
+End with the revelation moment: "You've been experiencing CLAUDE.md this entire time -- every warm greeting, every analogy, every celebration. All of it comes from this one file."
 
 ---
 

@@ -37,8 +37,62 @@ You don't need to manage this process yourself — Claude handles the delegation
 - **Analyze data from different sources:** Subagents each dig into a different dataset, then the main Claude synthesizes the findings
 - **Audit a codebase from multiple angles:** One subagent checks for security issues, another looks at performance, another reviews code style — all simultaneously
 
+## Custom sub-agents: a permanent specialized team
+
+So far we've been talking about **ad-hoc agents** — temporary workers spun up for one specific task. There's a second flavor worth knowing: **custom sub-agents.** These are *permanent* AI team members you define once and reuse forever.
+
+The difference in one line:
+
+- **Ad-hoc agents** are for *doing* many things in parallel.
+- **Custom sub-agents** are for getting *specialized perspectives* you need repeatedly.
+
+### What makes a custom sub-agent
+
+A custom sub-agent is just a markdown file in your project's `.claude/agents/` folder. Each one defines:
+
+- A **name and emoji** (the emoji shows up in your terminal so you can see which specialist is talking)
+- A **color** (visual distinction — purple, blue, green, red, etc.)
+- A **persona** (background, communication style, what they care about)
+- An **expertise** list (the specific skills they bring)
+
+Once defined, you summon them by name. Instead of telling Claude "act like an engineer" every time, you build a real `👨‍💻 Engineer` sub-agent once — with 10 years of pretend experience, direct communication style, and architecture expertise — and call them whenever you need a technical gut-check.
+
+### When to use which
+
+| Scenario | Use this |
+|----------|----------|
+| Process 20 meeting notes simultaneously | Ad-hoc agents (parallel workers) |
+| Get technical feedback on specs weekly | Custom sub-agent (Engineer) |
+| Research 5 competitors at once | Ad-hoc agents (one-time) |
+| Convert weekly updates into exec summaries | Custom sub-agent (Executive) |
+| Analyze 50 user interviews in parallel | Ad-hoc agents (batch processing) |
+| Get UX perspective on designs repeatedly | Custom sub-agent (User Researcher) |
+
+Ad-hoc = many workers, one task. Custom = one specialist, called again and again.
+
+### Anatomy of a sub-agent file
+
+```markdown
+# 👨‍💻 Engineer
+
+## Color
+purple
+
+## Persona
+You are an experienced software engineer with 10+ years at top tech
+companies. Direct and pragmatic. Flag risks early; suggest alternatives
+when something won't work.
+
+## Expertise
+- System architecture and design patterns
+- Performance optimization and scalability
+- Spotting edge cases and error states
+```
+
+Save that as `.claude/agents/engineer.md` and you've got a permanent Engineer on your team. Call them any time with `👨‍💻 Engineer, review @dashboard-prd.md`. Run `/agents` to list everyone you've hired.
+
 ## Quick check
 
-You need Claude to research three competing products and write a comparison. Would you do this with one Claude working sequentially, or with subagents? Why?
+You need Claude to research three competing products and write a comparison. Would you do this with ad-hoc agents or with a custom sub-agent? Why?
 
-*(Subagents are the way to go here! Each subagent researches one product in parallel, then the main Claude combines the findings into a comparison. Faster, cleaner, and each subagent can focus deeply on its assigned product.)*
+*(Ad-hoc agents are the way to go here! It's a one-time parallel task — three workers researching three products simultaneously. A custom sub-agent would make sense if you had to review products every week and wanted a "🔍 Product Analyst" you could call on repeatedly.)*

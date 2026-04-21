@@ -17,22 +17,50 @@ Set the stage: so far, everything has been about what happens *inside* Claude. T
 
 ## Step 2 — Teach
 
-Read and reference the concept doc at `concepts/what-is-mcp.md` to ground your explanation.
+Teach MCP by starting from a concept the student likely already knows — **APIs** — and building up to MCP from there. Read the concept doc at `concepts/what-is-mcp.md` to ground your explanation.
 
-Explain MCP (Model Context Protocol) using the "universal remote" analogy:
+### Start with APIs
 
-- You know how you might have separate remotes for your TV, your sound system, and your smart lights? Imagine one universal remote that could control all of them. That's what MCP does for Claude.
-- MCP is a standard way for Claude to plug into external tools and services. Each "MCP server" is like an adapter that gives Claude a new ability it wouldn't otherwise have.
-- Without MCP, Claude can only work with what you type or paste into the conversation. With MCP, Claude can actually *reach out* and interact with your real tools.
+- APIs are how software talks to other software. An API defines what you can ask for and how to ask for it — endpoints, data formats, and so on.
+- Example: when someone clicks "submit" on a webpage, it might send an HTTP request to the **Google Sheets API** to save or fetch information behind the scenes.
 
-Make sure to spell out that MCP stands for **Model Context Protocol** — but reassure the student they don't need to memorize the acronym. The concept is what matters: it's a way to connect Claude to things.
+### The problem with APIs
 
-Explain the pattern simply:
-1. Someone builds an MCP server for a specific tool or service
-2. You connect that server to your Claude setup
-3. Claude gains new abilities — it can now use that tool
+- There's no single universal standard for how APIs describe what actions they support, how to call them, or how to authenticate. Each provider makes up its own conventions.
+- Google Sheets might handle auth one way; Canva or Figma might do it another way. Every tool is a snowflake.
+- That's a nightmare for an LLM. Imagine Claude having to learn every provider's custom method from scratch just to be useful!
 
-This is a community-driven ecosystem. People are building new MCP servers all the time, which means Claude keeps getting more capable.
+### Enter MCP
+
+- Anthropic created **MCP — the Model Context Protocol** — and open-sourced it (anyone can use it).
+- MCP is a *standard* for how LLMs talk to tools. Information is still exchanged, actions are still performed — but now there are agreed-upon conventions for:
+  - (a) **Authentication** — how Claude proves it has permission
+  - (b) **Discovery** — how Claude sees what actions are available
+  - (c) **Requests** — how Claude actually calls those actions and gets responses back
+- So a Gmail MCP, a Canva MCP, and an Instant MCP all work in the *same shape*. That makes it dramatically easier for Claude to pick up a new tool — no custom integration code per provider.
+- Don't worry about memorizing the acronym. Just remember: **MCP = a standardized way for Claude to talk to external tools.**
+
+### MCP vs CLI vs GUI: the three ways to interact with a tool
+
+Make this concrete. Walk the student through a scenario: *"Say you want to push a database schema to a tool like Instant. You have three options."*
+
+1. **The dashboard (a GUI).** Open your browser, go to the Instant dashboard, click around, edit schema and permissions by hand. Good for humans, slow for anything repetitive.
+2. **The CLI** (Command Line Interface). The tool ships a terminal command — e.g. `npx instant-cli push`. Good for developers who live in the terminal and want to automate.
+3. **The MCP.** Let Claude do it. You tell Claude what you want; it figures out that it needs to push schema, and it uses the MCP connection to actually do it.
+
+The real tradeoff: **MCPs cost tokens.** When you connect an MCP server, its tool definitions — every available action, every parameter, every description — have to live somewhere in Claude's context. Historically they got loaded up front on every turn, and a big server could eat tens of thousands of tokens before you'd asked it to do anything. Newer clients defer this — tool names load eagerly, full schemas only when Claude decides to use them — but the cost hasn't gone away, it's just gotten more controllable. A CLI, by contrast, is just a command Claude runs on demand; it takes up context only when Claude actually reads the output. So MCP is the more agent-native, structured option, but CLIs are lighter-weight — and sometimes that matters more than standardization.
+
+### The takeaway pattern
+
+1. Someone builds an MCP server for a specific tool or service.
+2. You connect that server to your Claude setup.
+3. Claude gains a new ability — it can now use that tool through a consistent protocol.
+
+It's a community-driven ecosystem, and new MCP servers are being built all the time.
+
+Then tell the student:
+
+> "If you want to go deeper later, there's a concept doc at `concepts/what-is-mcp.md`. The easiest way to read it is to just ask me: *'Show me the concept doc on MCP'* — I'll pull it up and walk you through it."
 
 ## Step 3 — Show
 
@@ -96,4 +124,4 @@ Then do these three things:
    Tell the student: "Progress saved!"
 
 3. **Direct them to the next module:**
-   > "Next up is Module 6, where we'll explore how Claude *remembers* things between conversations. If MCP lets Claude reach out to the world, memory lets Claude carry knowledge forward over time. Type `module-6` when you're ready!"
+   > "Next up is Module 6 — Parallel Agents & Custom Sub-Agents! You've been working with one Claude at a time. Now you'll learn to run multiple Claudes in parallel for batch work, AND build a permanent specialized team (Engineer, Executive, User Researcher) you can call on whenever you need them. Type `module-6` when you're ready!"

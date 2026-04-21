@@ -21,13 +21,47 @@ Welcome the student to Module 2:
 
 Explain the key best practices one by one, in plain language:
 
-### Plan Mode
+### Input Modes
 
-- Before you ask Claude to build something big, you can enter **plan mode**. This tells Claude: "Don't start coding yet — let's think this through first."
-- In plan mode, Claude will research, ask questions, and write out a step-by-step plan before touching any code or files. This prevents wasted work and misunderstandings.
-- Think of it like a blueprint before building a house. You wouldn't start laying bricks without knowing the design, right?
-- You enter plan mode by typing `/plan` or by pressing **Shift+Tab** to toggle it on before sending a message.
-- Once you approve the plan, Claude switches back to normal mode and starts executing.
+Claude Code has four input modes — think of them as gears. You shift between them with **Shift+Tab**. Pick the one that matches how much oversight you want.
+
+| Mode | What it does | When to use |
+|------|--------------|-------------|
+| **Edit mode** (default) | Claude asks permission before each tool call | Normal day-to-day work |
+| **Auto-accept** | Claude runs tool calls without pausing to ask; stops when it needs new info from you | Trusted, repetitive operations where you want speed |
+| **Plan mode** | Read-only. Claude writes out a step-by-step plan and waits for your approval before touching any code or files | Big or risky changes you want to review first |
+| **Auto-mode** | Claude runs continuously using its own judgment; you provide course corrections as it goes | Longer autonomous tasks where you want to stay out of the loop |
+
+Think of plan mode like a blueprint before building a house — you wouldn't start laying bricks without knowing the design, right? And auto-mode is like handing the keys to a trusted contractor: you check in on progress, but you're not watching every hammer swing.
+
+### Think Keywords
+
+You can control how much reasoning Claude does before it acts by adding a "think" keyword to your message. More thinking = more tokens, but better answers on hard problems.
+
+| Keyword | Analysis depth | When to use |
+|---------|----------------|-------------|
+| *(none)* | Normal | Routine tasks and simple questions |
+| `think` | Deeper | Ambiguous problems, design decisions |
+| `think harder` | Deeper still | Tricky bugs, weighing tradeoffs |
+| `ultrathink` | Max | Critical architectural decisions, complex debugging |
+
+Example: *"ultrathink about whether we should restructure the auth flow."*
+
+### `--dangerously-skip-permissions`
+
+This CLI flag turns off per-tool-call permission prompts. Once you trust how Claude behaves in your repo, it's a huge speed boost. **We recommend turning it on once you feel comfortable in Claude Code** — not on day one.
+
+Usage:
+
+```bash
+claude --dangerously-skip-permissions
+```
+
+**The tradeoff:**
+- **Risk:** No safety net. Commands execute immediately — including file deletions and destructive git operations.
+- **Reward:** Pure flow state. ~10× faster. Real workflow speed.
+
+Best practice: use it when your git state is clean so you can roll back anything unexpected.
 
 ### Commands
 
@@ -63,7 +97,7 @@ Explain the key best practices one by one, in plain language:
 ### Keyboard Shortcuts
 
 - **Escape** — cancel Claude's current response if it's going in the wrong direction. You don't have to wait for it to finish.
-- **Shift+Tab** — toggle plan mode on/off before sending a message.
+- **Shift+Tab** — cycle through the four input modes (edit, auto-accept, plan, auto-mode) before sending a message.
 - These save a lot of time once you get used to them.
 
 ---
@@ -75,8 +109,6 @@ Demonstrate these concepts interactively:
 1. **Show /help:** Run the `/help` command or explain what it would show. Walk through the list of available commands so the student sees the full menu of options.
 
 2. **Explain /clear in context:** "See how we've been having this long conversation across multiple modules? If you ever feel like things are getting cluttered or you want a clean slate, `/clear` resets the conversation. But here's the key: your CLAUDE.md instructions and your progress checklist are still there. It's like clearing your desk but keeping your filing cabinet."
-
-3. **Explain resume:** "When we're done today and you close this terminal, you can come back tomorrow and type `claude --resume` to pick up right where we left off. No need to re-explain anything."
 
 ---
 

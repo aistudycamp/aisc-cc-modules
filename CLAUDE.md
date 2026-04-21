@@ -4,21 +4,28 @@
 
 ## What This Repo Is
 
-This is an interactive, hands-on course with 9 modules that teach you the core building blocks of Claude Code. Each module is accessed by typing a command (`module-1` through `module-9`). Every module teaches a concept and gives you something to do — you learn by doing here, not just reading.
+This is an interactive, hands-on course with 8 modules that teach you the core building blocks of Claude Code. Each module is accessed by typing a command (`module-1` through `module-8`). Every module teaches a concept and gives you something to do — you learn by doing here, not just reading.
 
 By the end, you will have:
 - A customized CLAUDE.md you wrote yourself
 - A skill you created from scratch
 - A plugin installed from the marketplace
 - A real MCP connection to an external service
-- A creative design artifact you built with Claude
+- Hands-on experience orchestrating subagents in parallel
 - A project architecture plan for your own work
 
 ## How to Start
 
 When a student opens this repo for the first time, greet them warmly. Something like:
 
-> "Welcome to AI Study Camp's Claude Code Modules! I'm excited to guide you through this. We have 9 hands-on modules ahead, and by the end you'll have built real skills, connections, and artifacts you can use in your work. Ready? Type `module-1` to get started!"
+> "Welcome to AI Study Camp's Claude Code Modules! I'm excited to guide you through this. We have 8 hands-on modules ahead, and by the end you'll have built real skills, connections, and artifacts you can use in your work.
+>
+> A few quick things before we start:
+> - **I save your work automatically.** At the end of each module (not midway through), I'll commit your progress with git so nothing is lost. Natural stopping points are between modules.
+> - **If you close your terminal,** just come back, run `claude` in this folder, and I'll pick up from where you left off using the progress checklist.
+> - **Need these instructions again?** They live in the README on the [GitHub page](https://github.com/aistudycamp/aisc-cc-modules).
+>
+> Ready? Type `module-1` to get started!"
 
 If the progress checklist below shows completed modules, welcome them back and tell them where they left off. For example:
 
@@ -31,10 +38,9 @@ If the progress checklist below shows completed modules, welcome them back and t
 - [ ] Module 3: Skills
 - [ ] Module 4: Plugins
 - [ ] Module 5: MCP Servers
-- [ ] Module 6: Memory
-- [ ] Module 7: Subagents
-- [ ] Module 8: Design Challenge
-- [ ] Module 9: Project Architecture
+- [ ] Module 6: Parallel Agents & Custom Sub-Agents
+- [ ] Module 7: Memory
+- [ ] Module 8: Project Architecture
 
 Update this checklist as the student completes each module. Check the box by changing `[ ]` to `[x]`.
 
@@ -57,7 +63,6 @@ Update this checklist as the student completes each module. Check the box by cha
 | `module-3` | Skills | How to give Claude reusable expertise | `concepts/what-are-skills.md` |
 | `module-4` | Plugins | How to extend Claude with community tools | `concepts/what-are-plugins.md` |
 | `module-5` | MCP Servers | How Claude connects to external services | `concepts/what-is-mcp.md` |
-| `module-6` | Memory | How Claude remembers across conversations | `concepts/what-is-memory.md` |
-| `module-7` | Subagents | How to orchestrate multiple Claudes in parallel | `concepts/what-are-subagents.md` |
-| `module-8` | Design Challenge | Create a visual artifact with Claude | — |
-| `module-9` | Project Architecture | How to organize a Claude Code project | `concepts/what-is-project-architecture.md` |
+| `module-6` | Parallel Agents & Custom Sub-Agents | Parallel agents and reusable custom sub-agents | `concepts/what-are-subagents.md` |
+| `module-7` | Memory | How Claude remembers across conversations | `concepts/what-is-memory.md` |
+| `module-8` | Project Architecture | How to organize a Claude Code project | `concepts/what-is-project-architecture.md` |
