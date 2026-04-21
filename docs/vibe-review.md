@@ -1,4 +1,4 @@
-# Vibe Review: AI for Prod Learning Repo
+# Vibe Review: AI Study Camp's Claude Code Modules
 
 > Consolidated findings from three parallel reviewers: Security, Code Quality, and UX.
 > Reviewed on 2026-04-04.

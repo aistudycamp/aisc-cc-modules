@@ -1,4 +1,4 @@
-# AI for Prod — Learning Repo
+# AI Study Camp's Claude Code Modules
 
 Welcome to the AI Study Camp hands-on learning experience! This repo will teach you the core building blocks of Claude Code through 9 interactive modules — each one teaches a concept and gives you something to do.
 
@@ -12,12 +12,12 @@ Welcome to the AI Study Camp hands-on learning experience! This repo will teach 
 
 1. **Clone this repo**
    ```
-   git clone https://github.com/ngf9/aiforprod.git
+   git clone https://github.com/aistudycamp/aisc-cc-modules.git
    ```
 
 2. **Open the folder in your terminal**
    ```
-   cd aiforprod
+   cd aisc-cc-modules
    ```
 
 3. **Start Claude Code**

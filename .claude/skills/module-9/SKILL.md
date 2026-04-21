@@ -136,6 +136,6 @@ Then do these three things:
    Tell the student: "Progress saved!"
 
 3. **Deliver the course finale with genuine warmth:**
-   > "You did it. You've completed the entire AI for Prod course. Over nine modules, you learned how to shape Claude's behavior with CLAUDE.md, use it like a pro with best practices, teach it new expertise through skills, extend it with plugins, connect it to the world with MCP, set up memory, orchestrate subagents, create something visual, and architect a whole project.
+   > "You did it. You've completed AI Study Camp's Claude Code Modules. Over nine modules, you learned how to shape Claude's behavior with CLAUDE.md, use it like a pro with best practices, teach it new expertise through skills, extend it with plugins, connect it to the world with MCP, set up memory, orchestrate subagents, create something visual, and architect a whole project.
    >
    > You're no longer a beginner — you're a practitioner. The next step is putting it to work on YOUR real projects. Go build something amazing."
