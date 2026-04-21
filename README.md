@@ -1,4 +1,4 @@
-# AI for Prod — Learning Repo
+# AI Study Camp's Claude Code Learning Modules
 
 Welcome to the AI Study Camp hands-on learning experience! This repo will teach you the core building blocks of Claude Code through 9 interactive modules — each one teaches a concept and gives you something to do.
 
