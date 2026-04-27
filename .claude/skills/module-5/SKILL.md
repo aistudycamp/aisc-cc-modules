@@ -78,6 +78,18 @@ Walk through several real MCP server examples, making each one vivid and practic
 - Claude can visit websites, take screenshots, fill out forms, and automate web tasks
 - Think of it as giving Claude the ability to use a web browser on your behalf
 
+**GitHub MCP**
+- Claude can read issues, review PRs, check CI status, and post comments — all from your conversation
+- Imagine saying "summarize the open PRs assigned to me" and Claude pulls them with current review state and a one-liner on what each one needs
+
+**Linear MCP**
+- Claude can read your issues, sprints, and roadmap, and even create or update tickets
+- "What's on my plate this sprint?" becomes a real, useful answer Claude can pull from your Linear workspace
+
+**Notion MCP**
+- Claude can search your workspace, read pages, and create new ones
+- Imagine saying "find the doc where we decided on our auth strategy" and Claude pulls it from across your Notion in seconds
+
 **Database MCP**
 - Claude can query databases directly, pulling data and generating reports
 - Instead of exporting a CSV and pasting data, Claude just looks it up

@@ -12,9 +12,22 @@ You write it in plain English (no special format or coding required), and you ca
 
 Without a CLAUDE.md, Claude starts every conversation as a blank slate. With one, Claude already understands your preferences, your project structure, and your expectations -- so you spend less time repeating yourself and more time getting useful output.
 
+## Where CLAUDE.md lives
+
+CLAUDE.md isn't just one file — it lives at multiple scopes, and they stack on top of each other.
+
+The two you'll use most:
+
+- **Global** — `~/.claude/CLAUDE.md` in your home directory. Personal preferences, workflow defaults, communication style. Applies to *every* project you open on this machine.
+- **Project** — `CLAUDE.md` in the root folder of a repo. Project-specific context, team conventions, what this codebase is for. Committed to git so teammates get it automatically when they clone.
+
+A simple way to decide where something goes: if you'd want Claude to follow this instruction *no matter what project you're in*, it's global. If it's about *this specific project or team*, it's project-level.
+
+Two more advanced scopes exist — directory-level (e.g. `frontend/CLAUDE.md` for rules that only apply inside that folder) and personal overrides (`CLAUDE.local.md`, gitignored, for rules you don't want to share with the team). Module 7 covers those in depth — don't worry about them yet.
+
 ## How does it work?
 
-- You create a file called `CLAUDE.md` in your project's root folder (the main folder for your project)
+- You create a file called `CLAUDE.md` in your project's root folder (the main folder for your project), or in `~/.claude/` for the global version
 - Every time you start a new conversation, Claude reads this file first — before you even say anything
 - You write instructions in plain English -- no special syntax required
 - You can update it anytime, and Claude's behavior changes immediately in the next conversation

@@ -35,6 +35,10 @@ Then format the answers into a clean summary.
 
 The part between the `---` lines is the label on the recipe card (its name and what it does). Everything below is the recipe itself — plain English instructions that Claude follows. You'd run this one by typing `/daily-standup`.
 
+> 💡 **The `description` field is doing more work than it looks.**
+>
+> Claude reads the description on every turn to decide whether to **auto-invoke** the skill — no slash command needed. A vague description means the skill never fires when you actually need it. A precise one means Claude reaches for it automatically the moment your task matches. So when you write `description: Asks three standup questions and formats a summary.`, you're really telling Claude: *"reach for this when the user wants to run a standup."* That's what makes skills feel magical.
+
 ## How does it work?
 
 - Skills are stored as text files inside a `.claude/skills/` folder in your project — each skill gets its own folder with a file called `SKILL.md`

@@ -138,7 +138,74 @@ A few things worth calling out:
 
 The pattern isn't Next.js-specific — swap "Next.js" for Python, Rails, Go, or anything else, and the `.claude/` + CLAUDE.md + concepts layout stays the same.
 
-## Step 4 — Celebrate and Advance
+## Step 4 — Exercise: Tour Your Course Repo (and save it)
+
+Now let's make this concrete. Reading about project architecture is one thing — *seeing it applied to a real project* is another. The tricky part of architecture is that it's hard to visualize your own structure when you're inside it. So we're going to fix that: you'll do a guided tour of *this exact repo* (`aisc-cc-modules`) and save the tour as a reference doc you can come back to whenever you're designing your own project.
+
+1. **Set the frame.** Tell the student:
+
+   > "Now that you've seen the patterns, let's apply them to a real project — *this one*. I'm going to walk you through the architecture of `aisc-cc-modules` and explain what each piece is doing and *why* it lives where it does. You've been inside this repo the whole course — let's make it click."
+
+2. **Do a structured tour.** Use the Read tool and directory listing to actually look at each piece, then narrate it for the student. Hit each of these:
+
+   - **`CLAUDE.md`** (root) — the always-on briefing for this project. *What course concept it embodies: project-level CLAUDE.md from Module 2.*
+   - **`concepts/`** — the deep reference docs Claude reads on demand (`what-is-claude-md.md`, `what-are-skills.md`, etc.). *Concept: reference material that lives outside CLAUDE.md to keep it focused.*
+   - **`.claude/skills/module-N/`** — the skills you've been invoking all course (one folder per module, each with a `SKILL.md`). *Concept: project-level skills from Module 3.*
+   - **`examples/`** — copy-paste templates (the example skill, MCP setup, design options, plus the new `example-global-claude-md.md` and `example-project-claude-md.md` from Module 2).
+   - **`student-output/`** — where your artifacts from Module 4 (mockups), Module 5 (MCP wishlist), and now Module 7 live. *Concept: separating generated work from instructions.*
+   - **`.gitignore`** — the team-vs-personal split in action. Personal settings stay on the student's machine; everything else travels with the repo.
+
+   For each one, name **what it is**, **why it lives there**, and **which course concept it embodies**. This is the moment everything ties together.
+
+3. **Save the tour as an artifact.** Use the Write tool to create `student-output/module-7/repo-architecture-tour.md`. Capture the same tour you just walked through — what each folder is, why it lives there, and the concept it maps to. Format it as a clean reference doc the student can re-read months from now when they're designing their own repo.
+
+   A good structure:
+
+   ```markdown
+   # Repo Architecture Tour: aisc-cc-modules
+
+   *A walk through how this course's repo is organized — and the patterns you can lift for your own projects.*
+
+   ## CLAUDE.md (root)
+   **What:** ...
+   **Why here:** ...
+   **Concept it embodies:** Project-level CLAUDE.md (Module 2)
+
+   ## concepts/
+   ...
+
+   ## .claude/skills/
+   ...
+
+   ## examples/
+   ...
+
+   ## student-output/
+   ...
+
+   ## .gitignore
+   ...
+
+   ---
+
+   ## How to apply this to your own project
+
+   - Start with a `CLAUDE.md` at the root
+   - Add `.claude/skills/` for repeatable workflows
+   - Add `concepts/` or `docs/` for reference material
+   - Keep generated/personal work separate from instructions
+   - Use `.gitignore` to split shared from personal
+   ```
+
+4. **Show them the saved file.** Print the path and tell them:
+
+   > "That's your reference doc. Six months from now, when you're starting a new project and wondering *where do I put all this stuff?*, open this file. The patterns are right here."
+
+**Success criteria:** the student has seen the live tour AND has `student-output/module-7/repo-architecture-tour.md` saved as their reference artifact.
+
+---
+
+## Step 5 — Celebrate and Advance
 
 Celebrate this achievement:
 
@@ -153,8 +220,8 @@ Then do these three things:
 1. **Update the progress checklist** in CLAUDE.md by changing `- [ ] Module 7: Project Architecture` to `- [x] Module 7: Project Architecture`
 
 2. **Save their work with git.** Run the following commands (use the Bash tool):
-   - `git add CLAUDE.md`
-   - `git commit -m "Complete Module 7 — finished the course"`
+   - `git add CLAUDE.md student-output/module-7/`
+   - `git commit -m "Complete Module 7 — finished the course and saved the architecture tour"`
 
    Tell the student: "Progress saved!"
 

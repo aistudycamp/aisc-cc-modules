@@ -29,9 +29,9 @@ Explain skills using the "recipe cards and reference guides" analogy:
   - **Project skills** -- these live in `.claude/skills/` inside the repo itself. They get committed to git and travel with the project, so they only exist when Claude is opened inside that repo. Think of these like tools you leave on the jobsite -- the whole crew can grab them. That's how teammates share skills: just commit them to git and anyone who clones the repo gets them automatically.
   - **Global (user-level) skills** -- these live in `~/.claude/skills/` in your home directory. They're available across ALL your projects, no matter which repo you open. Think of these like your personal toolbelt that goes with you everywhere. Great for personal workflows you want available all the time.
 - Each skill file has two parts:
-  - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a name and description. The `name` field becomes the command you type to run it.
+  - **YAML frontmatter** at the top (the part between the `---` lines) -- this gives the skill a `name` and `description`. The `name` field becomes the command you type to run it. The `description` field is what makes skills feel magical: **Claude reads it on every turn and auto-invokes the skill whenever your task matches** — no slash command required. A vague description means the skill never fires when you need it. A precise one means Claude reaches for it on its own.
   - **Markdown body** below -- this is where the actual instructions live. You write them in plain English.
-- You run an action skill by typing `/` followed by its name. For example, a skill named `write-blog-post` would be invoked by typing `/write-blog-post`. Reference skills load automatically when Claude thinks they're relevant -- you don't need to invoke them.
+- You run an action skill by typing `/` followed by its name. For example, a skill named `write-blog-post` would be invoked by typing `/write-blog-post`. But because of that `description` field, Claude can also pick the skill on its own when your request matches — you might never need to type the slash command. Reference skills work the same way: they load automatically when Claude thinks they're relevant.
 
 Tell the student:
 
@@ -62,18 +62,28 @@ Read the example skill file at `examples/example-skill.md` using your Read tool.
 
 Now the student creates their own skill. Guide them step by step:
 
-1. **Brainstorm an idea.** Ask: "What's a task you'd love Claude to help you with in a consistent, repeatable way?" Offer some starter ideas:
+1. **Brainstorm an idea.** Ask: "What's a task you'd love Claude to help you with in a consistent, repeatable way?" Skills aren't just for personal workflows — they can also encode *how your team does something*, like a PRD format unique to your startup. Offer some starter ideas:
    - **"motivational-boost"** -- a skill that gives an inspiring pep talk whenever you need one
    - **"meeting-prep"** -- a skill that helps you prepare for a meeting by asking about attendees, goals, and agenda items
    - **"email-draft"** -- a skill that helps write professional emails by asking about the recipient, purpose, and tone
    - **"braindump"** -- a skill that helps you organize scattered thoughts into a clear structure
+   - **"prd-builder"** -- a skill that asks the questions your team always asks (TL;DR, problem, success metrics, scope, non-goals) and writes the PRD the way *you* write PRDs. Once you build it, every PRD you produce is consistent with how your team works.
    - Or their own idea! Encourage creativity.
 
-2. **Create the file together.** Once they've chosen an idea, help them build it:
-   - Ask them what the skill should be called (this becomes the `name` in frontmatter and the slash command)
-   - Ask them to describe what the skill should do, step by step
-   - Ask them what tone or style the skill should use
-   - Then use the Write tool to create a new `.md` file in `.claude/skills/` with the proper YAML frontmatter and instructions based on their answers
+2. **Create the file together — with their answers, not yours.** Once they've chosen an idea, you're going to *build it with them*, not for them. The student should feel like they made every decision.
+
+   ⚠️ **Important — do NOT auto-answer these questions on the student's behalf.** Ask each one and **wait for their response** before moving on. You can offer 2–3 example answers to spark thinking, but the student has to choose. They're *building* a skill, not greenlighting a template.
+
+   Ask one at a time:
+
+   - **Name?** "What should we call the skill? Some options: `pre-call-checklist`, `meeting-prep`, `briefing-builder`. What feels right for *your* workflow?" *(Wait for their answer.)*
+   - **Behavior?** "What should the skill actually do, step by step? Walk me through it like you're explaining it to a teammate." *(Wait for their answer. Ask follow-ups if it's vague.)*
+   - **Tone or style?** "How should it sound — friendly and casual, focused and direct, formal? Any phrases or formats you want it to use?" *(Wait for their answer.)*
+
+   ❌ Don't do this: *"I'll call it `meeting-prep` and give it a friendly tone — sound good?"*
+   ✅ Do this: *"What should we call it? Here are a few directions — what fits *your* workflow?"*
+
+   Only after you have all three answers, use the Write tool to create a new `.md` file in `.claude/skills/` with proper YAML frontmatter and instructions based on **their** answers.
 
 3. **Test it (and prove it persists)!** This is a two-part "aha" moment -- lean into the fun of it:
 

@@ -26,6 +26,17 @@ Explain CLAUDE.md using the "briefing document" analogy:
 - It shapes Claude's personality, its knowledge about the project, and what rules it should follow.
 - Without it, Claude starts every conversation as a blank slate. With it, Claude already knows your preferences and context.
 
+> 🚨 **ALERT! You can have more than one CLAUDE.md.**
+>
+> CLAUDE.md isn't a single file — it lives at two main scopes, and they stack:
+>
+> - **Global** — `~/.claude/CLAUDE.md` in your home folder. Personal preferences, workflow defaults, communication style. Applies to *every* project on your machine.
+> - **Project** — `CLAUDE.md` in a repo's root folder (like the one we're in right now). Project-specific context, team conventions, codebase rules. Committed to git, so teammates get it too.
+>
+> **Quick rule of thumb:** if you'd want it in *every* project, it belongs in your global file. If it's about *this* code or *this* team, it goes in the project file.
+>
+> We've got starter templates for both at `examples/example-global-claude-md.md` and `examples/example-project-claude-md.md` — feel free to peek at them whenever you want to set up your own. (Module 7 goes deeper on directory-level and personal-override scopes — don't worry about those yet.)
+
 Tell the student:
 
 > "If you want to go deeper later, there's a concept doc at `concepts/what-is-claude-md.md`. The easiest way to read it is to just ask me: *'Show me the concept doc on CLAUDE.md'* — I'll pull it up and walk you through it. (You can also open it in any text editor if you'd rather read it yourself.)"
@@ -62,7 +73,7 @@ Now the student gets hands-on. This exercise has them write a personal "About Me
 
 1. **Ask them about themselves.** Say something like:
 
-   > "Now it's your turn to customize this file. I want you to tell me a bit about yourself -- we're going to add an 'About the Student' section to the CLAUDE.md so I can tailor everything we do together to YOUR actual work and life. Tell me:
+   > "Now it's your turn to customize this file. I want you to tell me a bit about yourself -- we're going to add an 'About the Student' section to **this project's** CLAUDE.md (the one in the root of `aisc-cc-modules`, not your global one). That means it'll travel with this repo so I always know who you are when you come back here. Tell me:
    >
    > - What's your name?
    > - What's your job or role?

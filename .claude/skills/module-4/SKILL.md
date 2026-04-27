@@ -71,6 +71,16 @@ Now the student gets hands-on with plugins:
 
    **Part B — Render with frontend-design.** Now take those 3 directions and ask the frontend-design skill to build them as 3 separate HTML files (one per direction), saved to `student-output/module-4/`. Each file should be a single-page mockup of the chosen app's home screen styled in that direction.
 
+   ⚠️ **Important — be explicit with frontend-design about output format.** When you invoke it, tell it: *"produce 3 standalone HTML files only — do not start a dev server, do not scaffold a Next.js or any other project. Just write the three `.html` files to `student-output/module-4/`."* Otherwise it will spin up a dev server in addition to writing the files, which we don't need for this exercise.
+
+   A good prompt for frontend-design looks like:
+
+   > *"Build 3 standalone HTML mockups of [app]'s home feed — one per design direction below. Save them as `design-1.html`, `design-2.html`, `design-3.html` in `student-output/module-4/`. **Do not start a dev server. Do not scaffold a project. Single HTML files only — inline CSS is fine.** Open them with `open` when done.*
+   >
+   > *Direction 1: [their direction]*
+   > *Direction 2: [their direction]*
+   > *Direction 3: [their direction]"*
+
    **Part C — View in the browser.** Once the files are generated, open them so the student can actually see the designs. The simplest way:
    - On macOS, run `open student-output/module-4/design-1.html` (and repeat for 2 and 3). This opens each mockup in the student's default browser.
    - If they'd like them side-by-side, suggest opening all three in separate tabs.
