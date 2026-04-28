@@ -35,7 +35,7 @@ Explain CLAUDE.md using the "briefing document" analogy:
 >
 > **Quick rule of thumb:** if you'd want it in *every* project, it belongs in your global file. If it's about *this* code or *this* team, it goes in the project file.
 >
-> We've got starter templates for both at `examples/example-global-claude-md.md` and `examples/example-project-claude-md.md`. Feel free to peek at them whenever you want to set up your own. (Module 7 goes deeper on directory-level and personal-override scopes; don't worry about those yet.)
+> We've got starter templates at `examples/example-global-claude-md.md` and `examples/example-project-claude-md.md`. For more advanced patterns once you're comfortable, peek at `example-global-claude-md-remy.md` (a real-world full-featured global) and `example-karpathy-guidelines.md` (drop-in behavioral rules you can `@`-import). (Module 7 goes deeper on directory-level and personal-override scopes; don't worry about those yet.)
 
 Tell the student:
 
