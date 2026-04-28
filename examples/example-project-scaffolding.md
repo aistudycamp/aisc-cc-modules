@@ -15,11 +15,24 @@ my-project/
 ├── CLAUDE.md                       # Project briefing. Loaded by Claude every session.
 ├── CLAUDE.local.md                 # Personal overrides. Gitignored — your sticky notes on the shared rules.
 ├── .env                            # Secrets (API keys, DB URLs). NEVER commit.
-├── .env.example                    # Safe template listing which env vars exist. Committed.
 ├── .gitignore
 ├── .claude/
-│   ├── skills/                     # Project skills (committed; shared with the team).
+│   ├── skills/                     # Project skills (committed).
+│   │   ├── deploy/                 # Skill: deployment checklist.
+│   │   │   ├── SKILL.md            # Entry point — loaded when Claude invokes the skill.
+│   │   │   ├── references/         # Lazy-load deep docs (read only when SKILL.md links them).
+│   │   │   │   ├── rollback.md
+│   │   │   │   └── post-deploy-checks.md
+│   │   │   └── templates/          # Boilerplate the skill copies from.
+│   │   │       └── deploy-message.md
+│   │   ├── meeting-prep/           # Skill: pre-meeting brief.
+│   │   │   └── SKILL.md
+│   │   └── prd-builder/            # Skill: PRD scaffolder.
+│   │       └── SKILL.md
 │   ├── agents/                     # Custom sub-agents (committed).
+│   │   ├── engineer.md             # Technical reviewer.
+│   │   ├── executive.md            # Exec-style summarizer.
+│   │   └── user-researcher.md      # UX perspective.
 │   └── settings.local.json         # Personal Claude Code settings. Gitignored.
 ├── concepts/                       # Reference docs Claude reads on demand.
 ├── docs/                           # Human-facing docs (architecture, ADRs, glossary).
