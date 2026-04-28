@@ -60,6 +60,23 @@ By the end, you will have:
 - Hands-on experience orchestrating subagents in parallel
 - A project architecture plan for your own work
 
+## Examples and Templates
+
+The `examples/` folder has reference files you can lift into your own projects. Click any link to view it.
+
+| Category | File | What it is |
+|----------|------|-----------|
+| CLAUDE.md | [`example-global-claude-md.md`](examples/example-global-claude-md.md) | Minimal starter for `~/.claude/CLAUDE.md` |
+| CLAUDE.md | [`example-project-claude-md.md`](examples/example-project-claude-md.md) | Minimal starter for a project's root `CLAUDE.md` |
+| CLAUDE.md | [`example-global-claude-md-remy.md`](examples/example-global-claude-md-remy.md) | Full real-world global CLAUDE.md (AI with Remy newsletter) |
+| CLAUDE.md | [`example-karpathy-guidelines.md`](examples/example-karpathy-guidelines.md) | Karpathy-inspired coding rules — drop-in fragment to `@`-import |
+| Skills & MCP | [`example-skill.md`](examples/example-skill.md) | Annotated SKILL.md showing the full anatomy (frontmatter, when-to-use, references, templates, quality bar) |
+| Skills & MCP | [`example-mcp-setup.md`](examples/example-mcp-setup.md) | Walkthrough for connecting your first MCP server |
+| Project structure | [`example-project-scaffolding.md`](examples/example-project-scaffolding.md) | Full project folder anatomy with `@`-imports for personal + project context |
+| Workflow | [`example-build-cycle.md`](examples/example-build-cycle.md) | The Plan → Build → Review cycle, with beginner and advanced patterns for each phase |
+| Personal context | [`example-about-me-interview.md`](examples/example-about-me-interview.md) | Interview template that produces an `about-me.md` for personal context |
+| Personal context | [`example-my-company-interview.md`](examples/example-my-company-interview.md) | Interview template for `my-company.md` (goals, focus, decisions) |
+
 ## Need Help?
 
 If you get stuck at any point, just ask Claude! That's what it's here for.
