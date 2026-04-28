@@ -49,13 +49,13 @@ Read the example skill file at `examples/example-skill.md` using your Read tool.
 1. **The YAML frontmatter:**
    ```yaml
    ---
-   name: daily-standup
-   description: Run a quick daily standup — asks three questions and formats a summary.
+   name: prd-builder
+   description: Walks the user through building a PRD section by section — Purpose, User Flow, Core Functionalities, Stretch Features, Look & Feel, Build Approach, Success Metrics. Triggers when the user wants to draft a PRD, spec, or feature brief.
    ---
    ```
-   Explain: "See the `name: daily-standup`? That means you'd invoke this skill by typing `/daily-standup`. The description shows up in the skill list so you know what it does at a glance."
+   Explain: "See the `name: prd-builder`? That means you'd invoke this skill by typing `/prd-builder`. The description shows up in the skill list so you know what it does at a glance."
 
-2. **The markdown body:** Walk through the steps and tone section. "These are the instructions Claude follows. Ask three specific questions, then format a summary. The tone section reminds Claude to keep it casual. You can put whatever instructions you want here."
+2. **The markdown body:** Walk through the structure with the student. "See how the body has when-to-use guards, structured steps for each PRD section, lazy-load references, a template path, and a quality bar? Real skills are this organized. The tone section keeps Claude in character. You can put whatever instructions fit your workflow here."
 
 3. **Fun revelation:** "Here's a fun fact: the module you're doing right now? It's ALSO a skill file! The file that's telling me how to teach you this lesson lives in `.claude/skills/`. Skills are teaching you about skills. How meta is that?"
 
