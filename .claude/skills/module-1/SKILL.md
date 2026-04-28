@@ -19,7 +19,24 @@ Welcome the student to Module 1:
 
 ## Step 2: Teach
 
-Explain the key best practices one by one, in plain language:
+Before diving in, give the student a quick map of what's coming so they know what to expect:
+
+> "Here's everything we're going to cover in this module. We'll go through each one in detail, then quiz you at the end."
+
+| # | Concept | One-liner |
+|---|---------|-----------|
+| 1 | **Input modes** | Four "gears" you shift between with `Shift+Tab` based on how much oversight you want |
+| 2 | **Think keywords** | Add `think` / `think harder` / `ultrathink` to make Claude reason more deeply |
+| 3 | **`--dangerously-skip-permissions`** | A flag that turns off permission prompts for a big speed boost once you trust the workflow |
+| 4 | **Commands & slash commands** | Built-in commands like `/help`, `/clear`, `/compact` plus your own skills triggered with `/name` |
+| 5 | **Resuming a session** | Pick up a previous conversation with `claude --resume` |
+| 6 | **Giving good instructions** | Be specific, give context, break big tasks into steps |
+| 7 | **Search before you build** | Check the community for existing skills/plugins before creating your own |
+| 8 | **Keyboard shortcuts** | `Esc` to cancel, `Shift+Tab` to cycle modes |
+| 9 | **Working with images** | Paste screenshots into Claude to debug UI bugs or share mockups |
+| 10 | **Context management** | Spot when Claude is "running low" and use `/compact`, `/clear`, or a fresh session |
+
+Now let's walk through each one in plain language:
 
 ### Input Modes
 
@@ -98,8 +115,8 @@ Best practice: use it when your git state is clean so you can roll back anything
 
 ### Keyboard Shortcuts
 
-- **Escape** — cancel Claude's current response if it's going in the wrong direction. You don't have to wait for it to finish.
-- **Shift+Tab** — cycle through the four input modes (edit, auto-accept, plan, auto-mode) before sending a message.
+- **`Esc`** (the Escape key in the top-left of your keyboard) — cancel Claude's current response if it's going in the wrong direction. You don't have to wait for it to finish.
+- **`Shift+Tab`** — cycle through the four input modes (edit, auto-accept, plan, auto-mode) before sending a message.
 - These save a lot of time once you get used to them.
 
 ### Working with Images
@@ -130,25 +147,6 @@ Demonstrate these concepts interactively:
 1. **Show /help:** Run the `/help` command or explain what it would show. Walk through the list of available commands so the student sees the full menu of options.
 
 2. **Explain /clear in context:** "See how we've been having this long conversation across multiple modules? If you ever feel like things are getting cluttered or you want a clean slate, `/clear` resets the conversation. But here's the key: your CLAUDE.md instructions and your progress checklist are still there. It's like clearing your desk but keeping your filing cabinet."
-
----
-
-## Quick Recap Before the Quiz
-
-Before we jump into the exercise, here's a cheat sheet of everything we just covered:
-
-| Concept | One-line summary |
-|---------|------------------|
-| **Input modes** | Four gears (edit, auto-accept, plan, auto-mode) you shift with Shift+Tab based on how much oversight you want. |
-| **Think keywords** | Add `think`, `think harder`, or `ultrathink` to make Claude reason more deeply on hard problems. |
-| **`--dangerously-skip-permissions`** | Turns off permission prompts for a big speed boost — use once you trust the workflow. |
-| **Commands & slash commands** | Built-in commands like `/help`, `/clear`, `/compact` plus your own skills triggered with `/name`. |
-| **Resuming a session** | Run `claude --resume` (or `claude -r`) to pick up a previous conversation with full context. |
-| **Giving good instructions** | Be specific, give context, break big tasks into steps, and correct Claude when it's off. |
-| **Search before you build** | Check for existing skills, plugins, or community tools before creating your own. |
-| **Keyboard shortcuts** | Escape cancels a response; Shift+Tab cycles input modes. |
-| **Working with images** | Paste or drag screenshots into Claude Code to debug UI bugs, share mockups, or show errors. |
-| **Context management** | Watch for forgetfulness; use `/compact`, `/clear`, or a new session; customize `/statusline` to see usage. |
 
 ---
 
@@ -212,7 +210,7 @@ Take a second to appreciate how much ground you just covered. Here's everything 
 | **Resuming sessions** | Pick up long projects across days without re-explaining anything. |
 | **Giving good instructions** | Be specific, share context, and break big jobs into steps for better results. |
 | **Search before you build** | Save hours by finding existing skills and plugins before rolling your own. |
-| **Keyboard shortcuts** | Escape and Shift+Tab — small habits, big time savings. |
+| **Keyboard shortcuts** | `Esc` and `Shift+Tab` — small habits, big time savings. |
 | **Working with images** | Paste screenshots to debug UI issues, share mockups, or show errors visually. |
 | **Context management** | Keep Claude sharp across long conversations with `/compact`, `/clear`, and `/statusline`. |
 
