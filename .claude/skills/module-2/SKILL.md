@@ -73,7 +73,11 @@ Now the student gets hands-on. This exercise has them write a personal "About Me
 
 1. **Ask them about themselves.** Say something like:
 
-   > "Now it's your turn to customize this file. I want you to tell me a bit about yourself. We're going to add an 'About the Student' section to **this project's** CLAUDE.md (the one in the root of `aisc-cc-modules`, not your global one). That means it'll travel with this repo so I always know who you are when you come back here. Tell me:
+   > "Now it's your turn to customize this file. I want you to tell me a bit about yourself. We're going to add an 'About the Student' section to **this project's** CLAUDE.md (the one in the root of `aisc-cc-modules`, not your global one). That means it'll travel with this repo so I always know who you are when you come back here.
+   >
+   > Quick privacy note: this gets saved to your local copy of `CLAUDE.md`. It only leaves your machine if you push your fork to a public GitHub repo, so write whatever feels comfortable.
+   >
+   > Tell me:
    >
    > - What's your name?
    > - What's your job or role?

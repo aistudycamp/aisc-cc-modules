@@ -28,6 +28,10 @@ Welcome to the AI Study Camp hands-on learning experience! This repo will teach 
 4. **Say hello!**
    Claude will greet you and guide you from there. No need to memorize anything — just follow along.
 
+## A Note on Privacy
+
+If you fork this repo and push your work to a public GitHub repo, anything you write into `CLAUDE.md` becomes public — including the personal info you'll add in Module 2 (name, role, tools, goals). To keep your fork private: either don't push it, or set its visibility to private when you create it. Your local `CLAUDE.md` always stays on your machine until you push.
+
 ## Pausing and Resuming
 
 Each module ends with a git commit that saves your progress — the checklist in `CLAUDE.md` tracks which modules you've completed. **Natural stopping points are between modules**, so if you need a break, try to wrap up the current module first.
