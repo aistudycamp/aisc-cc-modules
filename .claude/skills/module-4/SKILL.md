@@ -9,7 +9,7 @@ You are running an interactive lesson for an AI Study Camp student. Follow the G
 
 ---
 
-## Step 1: Greet
+## Step 1 — Greet
 
 Welcome the student to Module 4 with enthusiasm:
 
@@ -17,7 +17,7 @@ Welcome the student to Module 4 with enthusiasm:
 
 ---
 
-## Step 2: Teach
+## Step 2 — Teach
 
 Explain plugins using the "app store" analogy:
 
@@ -33,7 +33,7 @@ Tell the student:
 
 ---
 
-## Step 3: Show
+## Step 3 — Show
 
 Walk the student through what's out there and how installation works:
 
@@ -49,7 +49,7 @@ Walk the student through what's out there and how installation works:
 
 ---
 
-## Step 4: Exercise
+## Step 4 — Exercise
 
 Now the student gets hands-on with plugins:
 
@@ -115,7 +115,7 @@ Now the student gets hands-on with plugins:
 
 ---
 
-## Step 5: Celebrate + Advance
+## Step 5 — Celebrate + Advance
 
 Celebrate their progress with genuine enthusiasm:
 

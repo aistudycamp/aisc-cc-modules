@@ -48,14 +48,17 @@ The difference in one line:
 
 ### What makes a custom sub-agent
 
-A custom sub-agent is just a markdown file in your project's `.claude/agents/` folder. Each one defines:
+A custom sub-agent is a markdown file in your project's `.claude/agents/` folder. The file has two parts: **YAML frontmatter** at the top (between the `---` lines) for metadata, and the **body** below — the system prompt that defines who this specialist is and how they work.
 
-- A **name and emoji** (the emoji shows up in your terminal so you can see which specialist is talking)
-- A **color** (visual distinction — purple, blue, green, red, etc.)
-- A **persona** (background, communication style, what they care about)
-- An **expertise** list (the specific skills they bring)
+The frontmatter fields:
 
-Once defined, you summon them by name. Instead of telling Claude "act like an engineer" every time, you build a real `👨‍💻 Engineer` sub-agent once — with 10 years of pretend experience, direct communication style, and architecture expertise — and call them whenever you need a technical gut-check.
+- **`name`** — short identifier in lowercase with hyphens. This is how you call the agent: `@engineer`.
+- **`description`** — the most important field. Claude reads this to decide when to auto-invoke the agent. Be specific about the trigger situation.
+- **`tools`** — comma-separated list of tools the agent can use. Scoping tools is powerful: a reviewer with `Read, Grep, Glob` literally cannot edit files.
+- **`model`** — which model to run (`sonnet`, `haiku`, `opus`). Use `haiku` for cheap/fast work; reserve `opus` for deep reasoning.
+- **`color`** — a visual badge so you can tell at a glance which agent is responding (`red`, `blue`, `green`, `yellow`, `purple`, `orange`, `pink`, `cyan`, or `automatic`).
+
+Once defined, you summon them by name. Instead of telling Claude "act like an engineer" every time, you build a real Engineer sub-agent once and call on it whenever you need a technical gut-check.
 
 ### When to use which
 
@@ -73,12 +76,14 @@ Ad-hoc = many workers, one task. Custom = one specialist, called again and again
 ### Anatomy of a sub-agent file
 
 ```markdown
-# 👨‍💻 Engineer
+---
+name: engineer
+description: Use for technical reviews of specs, architecture decisions, and implementation feedback. Flags risks, edge cases, and scalability concerns.
+tools: Read, Grep, Glob, Bash
+model: sonnet
+color: purple
+---
 
-## Color
-purple
-
-## Persona
 You are an experienced software engineer with 10+ years at top tech
 companies. Direct and pragmatic. Flag risks early; suggest alternatives
 when something won't work.
@@ -89,7 +94,7 @@ when something won't work.
 - Spotting edge cases and error states
 ```
 
-Save that as `.claude/agents/engineer.md` and you've got a permanent Engineer on your team. Call them any time with `👨‍💻 Engineer, review @dashboard-prd.md`. Run `/agents` to list everyone you've hired.
+Save that as `.claude/agents/engineer.md` and you've got a permanent Engineer on your team. Call them any time with `@engineer review @dashboard-prd.md`. Run `/agents` to list everyone you've hired.
 
 ## Quick check
 

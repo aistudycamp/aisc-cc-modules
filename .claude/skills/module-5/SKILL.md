@@ -116,6 +116,8 @@ Walk them through it:
 
 ### Part 2 — Actually connect ONE MCP server (live!)
 
+> ⚠️ **A quick security note before you connect anything.** An MCP server gets real access to whatever service you connect it to. A Gmail MCP can read your inbox. A Calendar MCP can see your schedule. A Slack MCP can read your DMs. Only connect servers from Anthropic, the official plugin marketplace, or sources you trust (well-known open source projects, or your company's IT team). If a server asks for broader permissions than it needs to do its job, decline and look for an alternative.
+
 Now the fun part. We're going to pick ONE of their 5 and actually wire it up right now.
 
 1. **Pick one together.** Say something like: "Out of your 5, which would be easiest to set up today? Let's do just one. You can connect the others on your own time later."

@@ -9,7 +9,7 @@ You are running an interactive lesson for an AI Study Camp student. Follow the G
 
 ---
 
-## Step 1: Greet
+## Step 1 — Greet
 
 Welcome the student to Module 3 with energy:
 
@@ -17,7 +17,7 @@ Welcome the student to Module 3 with energy:
 
 ---
 
-## Step 2: Teach
+## Step 2 — Teach
 
 Explain skills using the "recipe cards and reference guides" analogy:
 
@@ -42,7 +42,7 @@ Tell the student:
 
 ---
 
-## Step 3: Show
+## Step 3 — Show
 
 Read the example skill file at `examples/example-skill.md` using your Read tool. Then walk through it piece by piece:
 
@@ -61,7 +61,7 @@ Read the example skill file at `examples/example-skill.md` using your Read tool.
 
 ---
 
-## Step 4: Exercise
+## Step 4 — Exercise
 
 Now the student creates their own skill. Guide them step by step:
 
@@ -100,7 +100,7 @@ Now the student creates their own skill. Guide them step by step:
 
 ---
 
-## Step 5: Celebrate + Advance
+## Step 5 — Celebrate + Advance
 
 Give them a big, genuine congratulations:
 

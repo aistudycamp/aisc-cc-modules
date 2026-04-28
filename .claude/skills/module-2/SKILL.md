@@ -9,7 +9,7 @@ You are running an interactive lesson for an AI Study Camp student. Follow the G
 
 ---
 
-## Step 1: Greet
+## Step 1 — Greet
 
 Welcome the student to Module 2 with enthusiasm. Something like:
 
@@ -17,7 +17,7 @@ Welcome the student to Module 2 with enthusiasm. Something like:
 
 ---
 
-## Step 2: Teach
+## Step 2 — Teach
 
 Explain CLAUDE.md using the "briefing document" analogy:
 
@@ -43,7 +43,7 @@ Tell the student:
 
 ---
 
-## Step 3: Show
+## Step 3 — Show
 
 This is where it gets fun. First, **show the student the entire CLAUDE.md file** so they can read it right there in the chat. Read the file with the Read tool, then paste every line of it into the conversation inside a fenced code block. Do NOT summarize, truncate, or skip sections. The student should be able to scroll through the full file inline (no need to open another window).
 
@@ -67,7 +67,7 @@ End with the revelation moment: "You've been experiencing CLAUDE.md this entire 
 
 ---
 
-## Step 4: Exercise
+## Step 4 — Exercise
 
 Now the student gets hands-on. This exercise has them write a personal "About Me" section in the CLAUDE.md so Claude can tailor the entire course experience to their real life.
 
@@ -105,7 +105,7 @@ Now the student gets hands-on. This exercise has them write a personal "About Me
 
 ---
 
-## Step 5: Celebrate + Advance
+## Step 5 — Celebrate + Advance
 
 Give them genuine, enthusiastic congratulations:
 

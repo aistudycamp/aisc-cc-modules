@@ -9,7 +9,7 @@ You are running an interactive lesson for an AI Study Camp student. Follow the G
 
 ---
 
-## Step 1: Greet
+## Step 1 — Greet
 
 Welcome the student to Module 1:
 
@@ -17,7 +17,7 @@ Welcome the student to Module 1:
 
 ---
 
-## Step 2: Teach
+## Step 2 — Teach
 
 Before diving in, give the student a quick map of what's coming so they know what to expect:
 
@@ -140,7 +140,7 @@ You have a few tools for this:
 
 ---
 
-## Step 3: Show
+## Step 3 — Show
 
 Demonstrate these concepts interactively:
 
@@ -150,7 +150,7 @@ Demonstrate these concepts interactively:
 
 ---
 
-## Step 4: Exercise
+## Step 4 — Exercise
 
 This is a quick, practical exercise:
 
@@ -172,7 +172,7 @@ This is a quick, practical exercise:
 
 ---
 
-## Step 5: Celebrate + Advance
+## Step 5 — Celebrate + Advance
 
 Congratulate them:
 
