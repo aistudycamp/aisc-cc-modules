@@ -1,4 +1,4 @@
-<!-- Save this file to the root of your project as CLAUDE.md. It travels with the repo via git, so teammates get it too. -->
+<!-- Save this file to the root of your project as CLAUDE.md. It travels with the repo via git, so teammates get it too. Note it's generally recommended to keep CLAUDE.md files under 300 lines. -->
 
 # Project CLAUDE.md
 

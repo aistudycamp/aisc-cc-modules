@@ -96,6 +96,10 @@ Capture: 3 bullets, each with a specific number or measurable behavior.
 
 Use `templates/prd-template.md` for the final document. Fill each section with the user's answers. Keep the language declarative, not aspirational.
 
+## Save the file
+
+Save the finished PRD to `docs/PRD.md` in the project root. The `docs/` folder is the conventional home for human-readable project documentation, so teammates know where to look. If the project will have multiple PRDs, use `docs/prd-<feature-slug>.md` instead.
+
 ## Quality bar before declaring done
 
 - Every section has real content. No "TBD" placeholders.

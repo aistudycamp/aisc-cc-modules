@@ -1,4 +1,4 @@
-<!-- A more advanced, real-world example of a global CLAUDE.md. Save to ~/.claude/CLAUDE.md to apply globally across every project on your machine. Lift the patterns that fit your workflow; ignore the rest. -->
+<!-- A more advanced, real-world example of a global CLAUDE.md. Save to ~/.claude/CLAUDE.md to apply globally across every project on your machine. Lift the patterns that fit your workflow; ignore the rest. Note it's generally recommended to keep CLAUDE.md files under 300 lines. -->
 
 # Remy's Global CLAUDE.md
 

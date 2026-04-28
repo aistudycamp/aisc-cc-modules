@@ -1,4 +1,4 @@
-<!-- Save this file to ~/.claude/CLAUDE.md to apply globally across every project on your machine. -->
+<!-- Save this file to ~/.claude/CLAUDE.md to apply globally across every project on your machine. Note it's generally recommended to keep CLAUDE.md files under 300 lines. -->
 
 # Global CLAUDE.md
 
