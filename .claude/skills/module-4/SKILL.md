@@ -81,9 +81,31 @@ Now the student gets hands-on with plugins:
    > *Direction 2: [their direction]*
    > *Direction 3: [their direction]"*
 
-   **Part C — View in the browser.** Once the files are generated, open them so the student can actually see the designs. The simplest way:
-   - On macOS, run `open student-output/module-4/design-1.html` (and repeat for 2 and 3). This opens each mockup in the student's default browser.
-   - If they'd like them side-by-side, suggest opening all three in separate tabs.
+   **Part C — View in the browser.** ⚠️ **Don't stop after the files are generated** — the student has no idea how to view raw HTML files yet. Walk them all the way through to "I can see the mockups in my browser" before moving on.
+
+   Do this proactively, in order:
+
+   1. **Open them yourself with the Bash tool.** On macOS, run:
+      ```bash
+      open student-output/module-4/design-1.html
+      open student-output/module-4/design-2.html
+      open student-output/module-4/design-3.html
+      ```
+      Each `open` command launches that file in the student's default browser. (On Linux, use `xdg-open`; on Windows, use `start`.)
+
+   2. **Give them a copy-paste fallback** in case `open` doesn't work in their setup. Print the absolute paths and tell them:
+
+      > "If those didn't pop open automatically, here's plan B — copy any of these paths and paste it directly into your browser's address bar. That'll open the file:
+      >
+      > `file:///absolute/path/to/student-output/module-4/design-1.html`
+      > `file:///absolute/path/to/student-output/module-4/design-2.html`
+      > `file:///absolute/path/to/student-output/module-4/design-3.html`
+      >
+      > (You can also drag the file from Finder/Explorer straight into a browser window — same result.)"
+
+      Use `pwd` first to get the absolute path of the current project so the `file:///` URLs you print are real and clickable.
+
+   3. **Confirm they can see the mockups.** Don't move on until the student says "yes, I see them." If they want them side-by-side, suggest opening all three in separate browser tabs.
 
    After they've seen the mockups, do the reveal:
 
