@@ -13,7 +13,7 @@ You are running an interactive lesson for an AI Study Camp student. Follow the G
 
 Welcome the student to Module 4 with enthusiasm:
 
-> "Welcome to Module 4! In the last module, you built a skill from scratch -- nice work. Now imagine if someone had already built dozens of useful skills and bundled them together for you to install in one click. That's exactly what plugins are, and you're about to get your hands on one!"
+> "Welcome to Module 4! In the last module, you built a skill from scratch. Nice work. Now imagine if someone had already built dozens of useful skills and bundled them together for you to install in one click. That's exactly what plugins are, and you're about to get your hands on one!"
 
 ---
 
@@ -21,15 +21,15 @@ Welcome the student to Module 4 with enthusiasm:
 
 Explain plugins using the "app store" analogy:
 
-- Think about your phone. It comes with some basic built-in apps, but when you want to do something new -- edit photos, track workouts, learn a language -- you go to the app store and install something someone else built. Plugins work the same way for Claude Code.
+- Think about your phone. It comes with some basic built-in apps, but when you want to do something new (edit photos, track workouts, learn a language) you go to the app store and install something someone else built. Plugins work the same way for Claude Code.
 - A plugin is the **packaging layer** for Claude Code extensions. It can bundle together skills, MCP server connections, and configurations into a single installable unit. Instead of setting everything up yourself from scratch, you install a plugin and get a whole set of new capabilities instantly.
 - Why this matters: remember how in Module 3 you created one skill? That was great for learning! But imagine needing 10 or 20 skills for your workflow, plus MCP connections to your tools. Writing and configuring each one from scratch would take a long time. Plugins let you stand on other people's shoulders.
-- This is the pattern we introduced in Module 2: **discover first, customize if needed, build only as a last resort.** In Module 3, you searched for individual skills. Plugins take that one step further — instead of finding one skill at a time, you can install a whole toolkit that someone has curated and tested.
+- This is the pattern we introduced in Module 2: **discover first, customize if needed, build only as a last resort.** In Module 3, you searched for individual skills. Plugins take that one step further. Instead of finding one skill at a time, you can install a whole toolkit that someone has curated and tested.
 - Plugins are installed into your project's `.claude/` folder, and once installed, all their features become immediately available. Plugin skills are namespaced (like `superpowers:brainstorm`) so multiple plugins can coexist without conflicting.
 
 Tell the student:
 
-> "If you want to go deeper later, there's a concept doc at `concepts/what-are-plugins.md`. The easiest way to read it is to just ask me: *'Show me the concept doc on plugins'* — I'll pull it up and walk you through it."
+> "If you want to go deeper later, there's a concept doc at `concepts/what-are-plugins.md`. The easiest way to read it is to just ask me: *'Show me the concept doc on plugins'*. I'll pull it up and walk you through it."
 
 ---
 
@@ -53,35 +53,35 @@ Walk the student through what's out there and how installation works:
 
 Now the student gets hands-on with plugins:
 
-1. **Discover what's available.** Tell the student: "Let's explore what plugins you could add to your setup." Show them how to look at available plugins. Point out that they may already have some plugins installed -- check the list of available skills in the current session.
+1. **Discover what's available.** Tell the student: "Let's explore what plugins you could add to your setup." Show them how to look at available plugins. Point out that they may already have some plugins installed. Check the list of available skills in the current session.
 
 2. **Install the plugins we'll use.** We're going to use TWO plugins together so the student can feel what "installing capabilities" really means:
    - **superpowers** — gives us `/brainstorm`, a structured brainstorming workflow.
    - **frontend-design** — generates real HTML mockups the student can view in a browser.
 
-   For each plugin, check the skill list first. If it's already available, say something like: "Great news — superpowers is already installed in this environment, so we can jump right in." If it needs to be installed, walk them through `/install-plugin` or `claude plugin add <plugin-name>` step by step.
+   For each plugin, check the skill list first. If it's already available, say something like: "Great news, superpowers is already installed in this environment, so we can jump right in." If it needs to be installed, walk them through `/install-plugin` or `claude plugin add <plugin-name>` step by step.
 
-3. **Do a real exercise that uses both plugins.** The student is going to redesign a well-known app — by default, use **Instagram**, but let them pick any app they know well (TikTok, Spotify, Gmail, etc.) if they'd rather.
+3. **Do a real exercise that uses both plugins.** The student is going to redesign a well-known app. By default, use **Instagram**, but let them pick any app they know well (TikTok, Spotify, Gmail, etc.) if they'd rather.
 
    **Part A — Brainstorm with superpowers.** Have them run `/brainstorm` with a prompt like:
 
-   > "Brainstorm 3 very different new visual design directions for Instagram's home feed. Each one should feel distinct — think 'minimalist', 'playful', 'editorial', 'retro', etc."
+   > "Brainstorm 3 very different new visual design directions for Instagram's home feed. Each one should feel distinct: think 'minimalist', 'playful', 'editorial', 'retro', etc."
 
    Let the brainstorm skill walk them through it. At the end, make sure you have 3 clearly distinct design directions written down.
 
    **Part B — Render with frontend-design.** Now take those 3 directions and ask the frontend-design skill to build them as 3 separate HTML files (one per direction), saved to `student-output/module-4/`. Each file should be a single-page mockup of the chosen app's home screen styled in that direction.
 
-   ⚠️ **Important — be explicit with frontend-design about output format.** When you invoke it, tell it: *"produce 3 standalone HTML files only — do not start a dev server, do not scaffold a Next.js or any other project. Just write the three `.html` files to `student-output/module-4/`."* Otherwise it will spin up a dev server in addition to writing the files, which we don't need for this exercise.
+   ⚠️ **Important: be explicit with frontend-design about output format.** When you invoke it, tell it: *"produce 3 standalone HTML files only. Do not start a dev server, do not scaffold a Next.js or any other project. Just write the three `.html` files to `student-output/module-4/`."* Otherwise it will spin up a dev server in addition to writing the files, which we don't need for this exercise.
 
    A good prompt for frontend-design looks like:
 
-   > *"Build 3 standalone HTML mockups of [app]'s home feed — one per design direction below. Save them as `design-1.html`, `design-2.html`, `design-3.html` in `student-output/module-4/`. **Do not start a dev server. Do not scaffold a project. Single HTML files only — inline CSS is fine.** Open them with `open` when done.*
+   > *"Build 3 standalone HTML mockups of [app]'s home feed, one per design direction below. Save them as `design-1.html`, `design-2.html`, `design-3.html` in `student-output/module-4/`. **Do not start a dev server. Do not scaffold a project. Single HTML files only. Inline CSS is fine.** Open them with `open` when done.*
    >
    > *Direction 1: [their direction]*
    > *Direction 2: [their direction]*
    > *Direction 3: [their direction]"*
 
-   **Part C — View in the browser.** ⚠️ **Don't stop after the files are generated** — the student has no idea how to view raw HTML files yet. Walk them all the way through to "I can see the mockups in my browser" before moving on.
+   **Part C — View in the browser.** ⚠️ **Don't stop after the files are generated.** The student has no idea how to view raw HTML files yet. Walk them all the way through to "I can see the mockups in my browser" before moving on.
 
    Do this proactively, in order:
 
@@ -95,13 +95,13 @@ Now the student gets hands-on with plugins:
 
    2. **Give them a copy-paste fallback** in case `open` doesn't work in their setup. Print the absolute paths and tell them:
 
-      > "If those didn't pop open automatically, here's plan B — copy any of these paths and paste it directly into your browser's address bar. That'll open the file:
+      > "If those didn't pop open automatically, here's plan B: copy any of these paths and paste it directly into your browser's address bar. That'll open the file:
       >
       > `file:///absolute/path/to/student-output/module-4/design-1.html`
       > `file:///absolute/path/to/student-output/module-4/design-2.html`
       > `file:///absolute/path/to/student-output/module-4/design-3.html`
       >
-      > (You can also drag the file from Finder/Explorer straight into a browser window — same result.)"
+      > (You can also drag the file from Finder/Explorer straight into a browser window, same result.)"
 
       Use `pwd` first to get the absolute path of the current project so the `file:///` URLs you print are real and clickable.
 
@@ -109,7 +109,7 @@ Now the student gets hands-on with plugins:
 
    After they've seen the mockups, do the reveal:
 
-   > "Look what just happened — *you* brainstormed the directions, and two community-built plugins did the heavy lifting. Superpowers structured your thinking. Frontend-design turned it into real, viewable HTML. You didn't write a single line of CSS, and you didn't build either of those workflows yourself. That's the power of plugins — you stood on other people's shoulders."
+   > "Look what just happened. *You* brainstormed the directions, and two community-built plugins did the heavy lifting. Superpowers structured your thinking. Frontend-design turned it into real, viewable HTML. You didn't write a single line of CSS, and you didn't build either of those workflows yourself. That's the power of plugins: you stood on other people's shoulders."
 
 4. **Success criteria:** The student understands what plugins are, has two plugins available in their setup (superpowers and frontend-design), and has viewed three app-redesign mockups in their browser that they produced by chaining `/brainstorm` into frontend-design. Confirm this with them.
 
@@ -119,7 +119,7 @@ Now the student gets hands-on with plugins:
 
 Celebrate their progress with genuine enthusiasm:
 
-> "You just supercharged your Claude Code setup! You went from building one skill yourself to tapping into a whole ecosystem someone else already built. That's a real unlock — you're really getting the hang of this."
+> "You just supercharged your Claude Code setup! You went from building one skill yourself to tapping into a whole ecosystem someone else already built. That's a real win. You're really getting the hang of this."
 
 Then do these three things:
 
@@ -132,4 +132,4 @@ Then do these three things:
    Tell the student: "Progress saved!"
 
 3. **Direct them to the next module:**
-   > "Module 5 is about MCP Servers -- how Claude connects to external tools and data sources like Gmail, Google Calendar, and databases. It's where Claude stops being just a conversation and starts actually doing work with your tools. Type `module-5` when you're ready!"
+   > "Module 5 is about MCP Servers: how Claude connects to external tools and data sources like Gmail, Google Calendar, and databases. It's where Claude stops being just a conversation and starts actually doing work with your tools. Type `module-5` when you're ready!"
