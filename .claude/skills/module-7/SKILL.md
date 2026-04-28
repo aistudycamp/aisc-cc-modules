@@ -228,4 +228,6 @@ Then do these three things:
 3. **Deliver the course finale with genuine warmth:**
    > "You did it. You've completed AI Study Camp's Claude Code Modules. Over seven modules, you learned how to shape Claude's behavior with CLAUDE.md, use it like a pro with best practices, teach it new expertise through skills, extend it with plugins, connect it to the world with MCP, orchestrate parallel agents and build a custom sub-agent team, and architect a whole project.
    >
-   > The next step is putting it to work on YOUR real projects. Go build something amazing."
+   > The next step is putting it to work on YOUR real projects. Go build something amazing.
+   >
+   > One last thing: the **Examples and Templates** section in the README has reference files you can lift into your own work — CLAUDE.md templates, a full skill anatomy, project scaffolding, the Plan → Build → Review cycle, and more."
